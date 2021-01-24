@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Chakra Petch', sans-serif;
+}
+header{
+    height: fit-content;
+    background-color:#fff;
+   
+
+}
+.first-header {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: fit-content;
+    text-align: center;
+    background-color:rgb(55, 55, 97);
+    color: white;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.first-header div{
+    display: inline-block;
+}
+.first-header div:last-child{
+    padding-right: 20px;
+    float: right;
+}
+.first-header div:last-child i:hover{
+    color: red;
+
+}
+i{
+    margin-right:5px;
+}
+nav div{
+    display: inline-block;
+}
+.logo-side{
+    margin: 10px 0px 0px 30px;
+
+}
+.logo-side a{  
+    font-family: 'Indie Flower', cursive;
+    font-weight: 700;
+    font-size: 25px;
+    position: relative;
+    bottom: 3px;
+    right: 25px;
+    background: -webkit-linear-gradient(rgb(0, 183, 255),rgb(54, 105, 3),rgb(231, 72, 99),rgb(92, 7, 92));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+.nav-list{
+  
+    margin: 10px 10px 0px ;
+    height: 70px;
+    line-height:75px;
+}
+.nav-list a{
+    margin: 10px;
+    font-weight: 900;
+    font-size: 17px;  
+    background: -webkit-linear-gradient(rgb(0, 183, 255),rgb(54, 105, 3),rgb(231, 72, 99),rgb(92, 7, 92));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav-list a:hover{
+    border-bottom:2px solid black;
+}
+main{
+    height:fit-content;
+}
+
+.mySlides {
+    display: none;
+}
+.slideshow-container {
+  position: relative;
+}
+.fade {
+  animation-name:fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.search{
+   margin-left: 100px;
+  
+}
+#search-input{
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    background-color: rgba(71, 61, 139, 0.253);
+}
+#search-btn{
+    border-radius: 5px;
+    width: 28px;
+    height: 25px;
+    border: none;
+    background-color:rgb(84, 160, 84);
+    color: #fff;
+}
+.category{
+    border-radius: 50px;
+    
+}
+.cat-img{
+    border-radius: 150px;
+    margin: 10px;
+    opacity: 0.8;
+    display: block;
+}
+.cat-imgs{
+   text-align: center;
+    
+}
+.cat-imgs span {
+    color:rgb(55, 55, 97);
+    font-size: xx-large;
+    background-color: #fff;
+    width: fit-content;
+     padding: 5px;
+    position: relative;
+    bottom: 160px;
+    left:90px ;
+    z-index: 2;
+}
+
+.cat-imgs span:hover{
+    opacity: 0;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+.d-block{
+    display: block;
+}
+.rotate{
+    transform:scaleX(-1);
+}
+.break-line{ 
+    margin: 50px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700;
+    color: rgb(231, 72, 197);
+
+}
+
+.sale{
+    margin:50px 0px ;
+    border:70px solid rgb(55, 55, 97);
+    font-size: medium;
+    text-align: center;
+    
+}
+.sale-img{
+    display: inline-block;
+    margin: 15px;
+}
+del {
+    text-decoration: line-through;
+    font-style: italic;
+    color: red;
+    display: block;
+    text-align: center;
+    font-size: small;
+}
+.sale-img span {
+    display: block;
+    text-align: center;
+  
+    
+}
+.count-down{
+    float: right;
+    position: relative;
+    top: 75px;
+    margin-right: 70px;
+}
+.count-down span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    color: rgb(55, 55, 97);
+    font-size: x-large;
+    font-weight: 700;
+    margin-left:10px ;
+}
+.custom-sale{
+    margin: 50px 25px;
+    text-align: center;
+
+}
+
+.custom-sale img{
+    margin: 20px;
+}
