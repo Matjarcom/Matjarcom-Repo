@@ -30,14 +30,12 @@ function Products(name, source, price) {
     this.name = name;
     this.source = source;
     this.price = price;
-    Products.prototype.allGirlProducts.push(this);
-    Products.prototype.allBoyesProducts.push(this);
-    Products.prototype.learningToyes.push(this);
-    Products.prototype.crystalBalles.push(this);
-    Products.prototype.voiceToyes.push(this);
+    // Products.prototype.allGirlProducts.push(this);
+    // Products.prototype.allBoyesProducts.push(this);
+    // Products.prototype.learningToyes.push(this);
+    // Products.prototype.crystalBalles.push(this);
+    // Products.prototype.voiceToyes.push(this);
    
-
-  
 }
 Products.prototype.allGirlProducts = [];
 var girltoy1 = new Products('Pink-Horse', 'img/girltoy1.png','25jd');
@@ -45,36 +43,38 @@ var girltoy2 = new Products('pink-doll', 'img/girltoy2.png','10 JD');
 var girltoy3 = new Products('kitchen-collection','img/girltoy3.png','15JD');
 var girltoy4 = new Products('small-kitchen-collection','img/girltoy4.png','5JD');
 var girltoy5 = new Products('huge-kitchen-collection','img/girltoy5.png','25JD');
-Products.prototype.allBoyesProducts = [];
-var boytoy1 = new Products('green-car', 'img/greencar.png', '5 JD');
-var boytoy2 = new Products('yellow-car', 'img/yellowcar.png','5 JD');
-var boytoy3 = new Products('small-motorbike','img/boytoy3.png','20 JD');
-var boytoy4 = new Products('small-motobike-with-hand','img/boytoy4.png','30 JD');
-var boytoy5 = new Products('trans-yoyo','img/boytoy5.png','3 JD');
+Products.prototype.allGirlProducts.push(girltoy1);
+console.log(Products.prototype.allGirlProducts);
+// Products.prototype.allBoyesProducts = [];
+// var boytoy1 = new Products('green-car', 'img/greencar.png', '5 JD');
+// var boytoy2 = new Products('yellow-car', 'img/yellowcar.png','5 JD');
+// var boytoy3 = new Products('small-motorbike','img/boytoy3.png','20 JD');
+// var boytoy4 = new Products('small-motobike-with-hand','img/boytoy4.png','30 JD');
+// var boytoy5 = new Products('trans-yoyo','img/boytoy5.png','3 JD');
 
-Products.prototype.learningToyes = [];
-var learntoy1 = new Products('Correct-Path', 'img/learning-toy1.png','10 JD');
-var learntoy2 = new Products('Alphapitical-Elephant', 'img/learning-toy2.png', '10JD');
-var learntoy3 = new Products('Alphapitical-lion','img/learningtoy3.png','10 JD');
-var learntoy4 = new Products('wood-intellegence','img/learningtoy4.png','15 JD');
-var learntoy5 = new Products('numbers-game','img/learningtoy5','15 JD');
-
-
-Products.prototype.crystalBalles = [];
-var crystalball1 = new Products('tree-crystal-balls', 'img/crystal-ball1.png','10 JD');
-var crystalball2 = new Products('gift-crystal-ball', 'img/crystal-ball2.png','10 JD');
-var crystalball3 = new Products('snow-tree-ball','img/crystalball3.png', '10 JD');
-var crystalball4 = new Products('snow-ball','img/crystalball4.png','10 JD');
+// Products.prototype.learningToyes = [];
+// var learntoy1 = new Products('Correct-Path', 'img/learning-toy1.png','10 JD');
+// var learntoy2 = new Products('Alphapitical-Elephant', 'img/learning-toy2.png', '10JD');
+// var learntoy3 = new Products('Alphapitical-lion','img/learningtoy3.png','10 JD');
+// var learntoy4 = new Products('wood-intellegence','img/learningtoy4.png','15 JD');
+// var learntoy5 = new Products('numbers-game','img/learningtoy5','15 JD');
 
 
+// Products.prototype.crystalBalles = [];
+// var crystalball1 = new Products('tree-crystal-balls', 'img/crystal-ball1.png','10 JD');
+// var crystalball2 = new Products('gift-crystal-ball', 'img/crystal-ball2.png','10 JD');
+// var crystalball3 = new Products('snow-tree-ball','img/crystalball3.png', '10 JD');
+// var crystalball4 = new Products('snow-ball','img/crystalball4.png','10 JD');
 
-Products.prototype.voiceToyes = [];
 
-var voicetoy1 = new Products('drum', 'img/voice-toy1.png','10 JD');
-var voicetoy2 = new Products('guitar', 'img/voice-toy2.png','15 JD');
-var voicetoy3 = new Products('telephon', 'img/voicetoy3.png','10 JD');
-var voicetoy4 = new Products('chrocodile','img/voicetoy4.png','10 JD');
-var voicetoy5 = new Products('children-piano','img/voicetoy5.png','10 JD');
+
+// Products.prototype.voiceToyes = [];
+
+// var voicetoy1 = new Products('drum', 'img/voice-toy1.png','10 JD');
+// var voicetoy2 = new Products('guitar', 'img/voice-toy2.png','15 JD');
+// var voicetoy3 = new Products('telephon', 'img/voicetoy3.png','10 JD');
+// var voicetoy4 = new Products('chrocodile','img/voicetoy4.png','10 JD');
+// var voicetoy5 = new Products('children-piano','img/voicetoy5.png','10 JD');
 
 
 
