@@ -45,7 +45,7 @@ nav div{
     margin: 10px 0px 0px 30px;
 
 }
-.logo-side a{  
+.logo-side a, .footer-logo a:last-child{  
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
     font-size: 25px;
@@ -76,7 +76,9 @@ nav div{
 }
 main{
     height:fit-content;
+  
 }
+
 
 .mySlides {
     display: none;
@@ -123,6 +125,8 @@ main{
 }
 .cat-imgs{
    text-align: center;
+   margin-bottom: 50px;
+  
     
 }
 .cat-imgs span {
@@ -151,7 +155,7 @@ main{
     transform:scaleX(-1);
 }
 .break-line{ 
-    margin: 50px;
+    margin: 100px 50px 50px 50px;
     text-align: center;
     font-size: xx-large;
     font-weight: 700;
@@ -160,7 +164,7 @@ main{
 }
 
 .sale{
-    margin:50px 0px ;
+    margin:100px 0px ;
     border:70px solid rgb(55, 55, 97);
     font-size: medium;
     text-align: center;
@@ -187,7 +191,7 @@ del {
 .count-down{
     float: right;
     position: relative;
-    top: 75px;
+    top: 120px;
     margin-right: 70px;
 }
 .count-down span{
@@ -201,11 +205,74 @@ del {
     margin-left:10px ;
 }
 .custom-sale{
-    margin: 50px 25px;
+    margin: 50px 25px 100px 25px;
     text-align: center;
 
 }
 
 .custom-sale img{
     margin: 20px;
+}
+
+.custom-piece{
+    margin:50px;
+    text-align: center;
+    height: 300px;
+}
+.custom-piece-img{
+    margin: 20px;
+    display: inline-block;
+    border-radius: 20px;  
+    box-shadow: 5px 5px rgba(231, 72, 197, 0.658);
+}
+.custom-piece-img:hover{
+    animation-name: resize;
+    animation-duration: 100s;
+}
+@keyframes  resize{
+    0% {width: 150px;height: 200px;} 
+  0.5% {width: 170px; height: 230px;}
+
+}
+
+footer{
+    background-color: rgb(55, 55, 97);
+    display:flex ;
+    
+}
+.footer{
+    display: inline-block;
+    color: rgb(241, 151, 222);
+   
+    margin:50px;
+    padding:  0px 80px;
+    height: 180px;
+
+    
+}
+.footer h1{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+}
+.footer a{
+    display: block;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+    padding-left: 20px;
+}
+.footer div{
+    padding-left: 40px;
+    font-size: 20px;
+}
+.footer i:hover{
+    color:darkturquoise;
+}
+.footer a:hover{
+    color:darkturquoise;
 }
