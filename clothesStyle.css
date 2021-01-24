@@ -1,0 +1,41 @@
+#bigContainer {
+  display: inline-block;
+}
+
+.singleProductContainer {
+  display: inline-block;
+  margin: 20px;
+  background-color: #f8f1f1;
+}
+
+.productNameClass {
+  color: brown;
+  display: block;
+  margin: 5px;
+}
+
+.productPriceClass {
+  color: black;
+  margin: 5px;
+  /* display: inline; */
+}
+
+.productGenderClass {
+  color: palevioletred;
+  margin: 5px;
+  /* display: inline; */
+}
+
+/* Button Styling */
+.addToCartButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #11698e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px;
+  width: 100px;
+  margin: 5px;
+}
