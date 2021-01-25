@@ -11,36 +11,51 @@ body{
 header{
     height: fit-content;
     background-color:#fff;
-   
+  
 
-}
-.first-header {
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    height: fit-content;
-    text-align: center;
-    background-color:rgb(55, 55, 97);
-    color: white;
-    font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
-}
-.first-header div{
-    display: inline-block;
-}
-.first-header div:last-child{
-    padding-right: 20px;
-    float: right;
-}
-.first-header div:last-child i:hover{
-    color: red;
-
-}
-i{
-    margin-right:5px;
 }
 nav div{
     display: inline-block;
+}
+
+.drop-down-list{
+
+
+}
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  height: 50px;
+  padding: 0px 20px;
+
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.drop-down-item{
+    display: none;
 }
 .logo-side{
     margin: 10px 0px 0px 30px;
@@ -53,14 +68,14 @@ nav div{
     position: relative;
     bottom: 3px;
     right: 25px;
-    background: -webkit-linear-gradient(rgb(0, 183, 255),rgb(54, 105, 3),rgb(231, 72, 99),rgb(92, 7, 92));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 1;
+    background: -webkit-linear-gradient(rgb(0, 183, 255),#cfb717e8,rgb(231, 72, 99),rgb(92, 7, 92));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
 }
 .nav-list{
   
-    margin: 10px 10px 0px ;
+    margin: 10px 10px 0px 10% ;
     height: 70px;
     line-height:75px;
 }
@@ -68,12 +83,13 @@ nav div{
     margin: 10px;
     font-weight: 900;
     font-size: 17px;  
-    background: -webkit-linear-gradient(rgb(0, 183, 255),rgb(54, 105, 3),rgb(231, 72, 99),rgb(92, 7, 92));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #4d375d ;
+
 }
 .nav-list a:hover{
-    border-bottom:2px solid black;
+    border-bottom:2px solid rgb(231, 72, 197);
+    color: rgb(231, 72, 197);
+
 }
 main{
     height:fit-content;
@@ -97,22 +113,34 @@ main{
   to {opacity: 1}
 }
 .search{
-   margin-left: 100px;
+    
+   margin-left:10%;
+   
   
 }
+
 #search-input{
     border-radius: 5px;
     padding: 5px;
     border: none;
-    background-color: rgba(71, 61, 139, 0.253);
+    background-color: rgba(231, 72, 197, 0.253);
+
 }
+
 #search-btn{
     border-radius: 5px;
     width: 28px;
     height: 25px;
     border: none;
-    background-color:rgb(84, 160, 84);
+    background-color:rgb(231, 72, 197);
+    font-size: 15px;
     color: #fff;
+
+}
+#search-btn i{
+    font-size: 20px;
+  
+    
 }
 .category{
     border-radius: 50px;
@@ -131,9 +159,10 @@ main{
     
 }
 .cat-imgs span {
-    color:rgb(55, 55, 97);
+    color:rgb(255, 255, 255);
     font-size: xx-large;
-    background-color: #fff;
+    background-color:rgb(231, 72, 197);
+
     width: fit-content;
      padding: 5px;
     position: relative;
@@ -156,7 +185,7 @@ main{
     transform:scaleX(-1);
 }
 .break-line{ 
-    margin: 100px 50px 50px 50px;
+    margin: 50px;
     text-align: center;
     font-size: xx-large;
     font-weight: 700;
@@ -169,16 +198,20 @@ main{
     border:70px solid rgb(55, 55, 97);
     font-size: medium;
     text-align: center;
+    color:rgb(55, 55, 97);
+    font-size: large;
     
 }
 .sale-img{
     display: inline-block;
-    margin: 15px;
+    margin: 10px;
+  
 }
 del {
     text-decoration: line-through;
     font-style: italic;
-    color: red;
+    color:  rgb(231, 72, 197);
+   
     display: block;
     text-align: center;
     font-size: small;
@@ -192,27 +225,28 @@ del {
 .count-down{
     float: right;
     position: relative;
-    top: 120px;
+    top: 130px;
     margin-right: 70px;
+
 }
 .count-down span{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 30px;
     padding: 5px;
     background-color: white;
-    color: rgb(55, 55, 97);
+    color:  rgb(231, 72, 197);
     font-size: x-large;
     font-weight: 700;
     margin-left:10px ;
 }
 .custom-sale{
-    margin: 50px 25px 100px 25px;
+ 
     text-align: center;
 
 }
 
 .custom-sale img{
-    margin: 20px;
+    margin: 5px;
 }
 
 .custom-piece{
@@ -221,42 +255,41 @@ del {
     height: 300px;
 }
 .custom-piece-img{
-    margin: 20px;
+    background-color:  rgb(55, 55, 97);
+    padding: 40px;
+    margin: 10px;
     display: inline-block;
-    border-radius: 20px;  
-    box-shadow: 5px 5px rgba(231, 72, 197, 0.658);
+    border-radius: 50%;  
+    box-shadow: 3px 3px #ffe227af;
+
+    
 }
-.custom-piece-img:hover{
+.custom-piece-img img:hover{
     animation-name: resize;
     animation-duration: 100s;
 }
 @keyframes  resize{
-    0% {width: 150px;height: 200px;} 
-  0.5% {width: 170px; height: 230px;}
+    0% {width: 150px;height: 150px;} 
+  0.5% {width: 170px; height: 170px;}
 
 }
 
 footer{
     background-color: rgb(55, 55, 97);
     display:flex ;
-    
 }
 .footer{
     display: inline-block;
-    color: rgb(241, 151, 222);
-   
+    color:  rgb(231, 72, 197);
     margin:50px;
     padding:  0px 80px;
-    height: 180px;
-
-    
+    height: 180px;   
 }
 .footer h1{
     text-align: center;
     font-size: x-large;
     font-weight: 500;
     padding-bottom: 20px;
-
 }
 .footer a{
     display: block;
@@ -271,15 +304,31 @@ footer{
     padding-left: 40px;
     font-size: 20px;
 }
-.footer i:hover{
-    color:darkturquoise;
+.footer i{
+    font-size:23px;
+    padding-top: 5px;
+    margin: 5px;
 }
-.footer a:hover{
-    color:darkturquoise;
+.footer i:hover ,.footer a:hover{
+    color:#ffe227af;
 }
 
+.free-shipping{
+    background-color: #ffe227af;
+    text-align: center;
+    color: rgb(55, 55, 97);
+    line-height: 1.5;
 
-
+}
+.free-shipping h1{
+    font-size: xx-large;
+    font-weight: 800;
+    text-shadow:1px 1px white;
+    
+}
+.free-shipping h2{
+    font-size:larger;
+}
 
 
 
@@ -388,7 +437,3 @@ footer{
     border-left: 55px solid transparent;
 }
 
-.red-color{
-
-
-}
