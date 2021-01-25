@@ -43,7 +43,7 @@ var girltoy2 = new Products('pink-doll', 'img/girltoy2.png','10 JD');
 var girltoy3 = new Products('kitchen-collection','img/girltoy3.png','15JD');
 var girltoy4 = new Products('small-kitchen-collection','img/girltoy4.png','5JD');
 var girltoy5 = new Products('huge-kitchen-collection','img/girltoy5.png','25JD');
-Products.prototype.allGirlProducts.push(girltoy1);
+// Products.prototype.allGirlProducts.push(girltoy1);
 console.log(Products.prototype.allGirlProducts);
 // Products.prototype.allBoyesProducts = [];
 // var boytoy1 = new Products('green-car', 'img/greencar.png', '5 JD');
