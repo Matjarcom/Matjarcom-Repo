@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 a{
     text-decoration: none;
 }
@@ -275,4 +276,121 @@ footer{
 }
 .footer a:hover{
     color:darkturquoise;
+}
+
+
+
+
+
+
+/*---------- contact us page style -------------- */
+.contact{
+    margin: 50px 0px;
+}
+.contact > div{
+    border-radius:100px;
+    margin:10px auto;
+    padding: 30px;
+    width: 960px;
+    height:190px;
+   
+}
+
+.contact-par{
+    display: inline-block;
+    width: 60%;
+    font-size:large;
+    position: relative;
+    bottom: 65px;
+
+}
+.contact-par h1{
+    margin-bottom: 20px;
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+/* .rigth-img .contact {
+    float: right;
+
+}
+.bk-pink{
+    background-color: rgb(255 236 236);
+}
+.pink:after{
+ 
+    border: 93px solid rgb(255 236 236);
+}
+
+.bk-blue{
+    background-color: rgb(183, 215, 219);
+}
+.blue:after{
+ 
+    border: 93px solid rgb(183, 215, 219);
+}
+
+
+
+.bk-yellow{
+    background-color: rgb(248, 247, 176);
+}
+.yellow:after{
+ 
+    border: 93px solid  rgb(248, 247, 176);
+}
+
+
+.bk-green{
+    background-color: rgb(193, 235, 176);
+}
+.green:after{
+ 
+    border: 93px solid  rgb(193, 235, 176);
+}
+
+
+.bk-purple{
+    background-color: rgb(209, 190, 208);
+}
+.purple:after{
+ 
+    border: 93px solid rgb(209, 190, 208);
+}
+ */
+
+
+.flag {
+    display: inline;
+    position: relative;
+
+  }
+  .rigth-img-cutting{
+    bottom: 29px;
+    left: 60px;
+  }
+  .left-img-cutting{
+    bottom: 30px;
+    right:30px;
+  }
+  .rigth-img-cutting:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-bottom: 158px solid transparent;
+    border-right: 55px solid transparent;
+  }
+
+  .left-img-cutting:after{
+    position: absolute;
+    content: "";
+    right: 0px;
+    border-top: 157px solid transparent;
+    border-left: 55px solid transparent;
+}
+
+.red-color{
+
+
 }
