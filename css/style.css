@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 a{
     text-decoration: none;
 }
@@ -275,4 +276,119 @@ footer{
 }
 .footer a:hover{
     color:darkturquoise;
+}
+
+
+
+
+
+
+/*---------- contact us page style -------------- */
+.contact{
+    margin: 50px 0px;
+}
+.contact > div{
+    border-radius:100px;
+    margin:10px auto;
+    padding: 30px;
+    width: 960px;
+    height:190px;
+   
+}
+
+.contact-par{
+    display: inline-block;
+    width: 60%;
+    font-size:large;
+    position: relative;
+    bottom: 65px;
+
+}
+.contact-par h1{
+    margin-bottom: 20px;
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.rigth-img .contact {
+    float: right;
+
+}
+.bk-pink{
+    background-color: #f6d6ad}
+.pink:after{
+ 
+    border: 93px solid #f6d6ad;
+}
+
+.bk-blue{
+    background-color: rgb(205, 222, 224);
+}
+.blue:after{
+ 
+    border: 93px solid rgb(205, 222, 224);
+}
+
+
+
+.bk-yellow{
+    background-color: #fafcc2;
+}
+.yellow:after{
+ 
+    border: 93px solid #fafcc2;}
+
+
+.bk-green{
+    background-color: #ccf6c8
+}
+.green:after{
+ 
+    border: 93px solid  #ccf6c8
+}
+
+
+.bk-purple{
+    background-color: rgb(211, 200, 210);
+}
+.purple:after{
+ 
+    border: 93px solid rgb(211, 200, 210);
+}
+
+
+
+.flag {
+    display: inline;
+    position: relative;
+
+  }
+  .rigth-img-cutting{
+    bottom: 29px;
+    left: 60px;
+  }
+  .left-img-cutting{
+    bottom: 30px;
+    right:30px;
+  }
+  .rigth-img-cutting:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-bottom: 158px solid transparent;
+    border-right: 55px solid transparent;
+  }
+
+  .left-img-cutting:after{
+    position: absolute;
+    content: "";
+    right: 0px;
+    border-top: 157px solid transparent;
+    border-left: 55px solid transparent;
+}
+
+.red-color{
+
+
 }
