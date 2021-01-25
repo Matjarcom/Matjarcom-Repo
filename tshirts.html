@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <main>
+
+        <!-- tshirt -->
+        <h1>Shirts</h1>
+        <div class="row">
+
+            <div id="item">
+                <img id="item-shirtlogo" src="assets/images/sticker/EMPTY.png" alt="hh">
+                <p id="item-text"></p>
+                <div id="item-upperbody">
+                </div>
+            </div>
+    
+            <div id="buttons">
+                <div class="details">
+                    <h3>colors</h3>
+                    <button onclick="colorchangeNext()"> < </button>
+                    <button onclick="colorchangeBack()"> > </button>
+            
+                    <button class="color-btn" id="green" onclick="colorgreen()">&nbsp;</button>
+                    <button class="color-btn" id="red" onclick="colorred()">&nbsp;</button>
+                    <button class="color-btn" id="blue" onclick="colorblue()">&nbsp;</button>
+                    <button class="color-btn" id="black" onclick="colorblack()">&nbsp;</button>
+                    <button class="color-btn" id="gray" onclick="colorgray()">&nbsp;</button>
+                </div>
+                <div class="details">
+                    <h3>logos</h3>
+                    <button onclick="changeLogo()">change logo</button>
+                </div>
+                <div class="details">
+                    <h3>add your text</h3>
+                    <button onclick="changetext()"> enter your name </button>
+                </div>
+                <div class="details">
+                    <h3>size</h3>
+                    <form>
+                        <select id="size" name="size">
+                            <option value="au">XL</option>
+                            <option value="ca">L</option>
+                            <option value="usa">M</option>
+                            <option value="usa">S</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="details">
+                    <h3>price</h3>
+                    <h2>25 JD</h2>
+                </div>
+                <div class="details">
+                    <button class="btn">add to cart</button>
+                </div>
+        
+                
+        
+            </div>
+        </div>
+
+
+
+    </main>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

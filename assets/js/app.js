@@ -20,35 +20,47 @@ var colorDegree = 300;
 
 function colorchangeNext(){
     colorDegree = colorDegree + 10;
-    document.getElementById("tpic").style.filter = "hue-rotate(" + colorDegree + "deg)";
+    document.getElementById("item-upperbody").style.filter = "hue-rotate(" + colorDegree + "deg)";
 }
 
 function colorchangeBack(){
     colorDegree = colorDegree - 10;
-    document.getElementById("tpic").style.filter = "hue-rotate(" + colorDegree + "deg)";
+    document.getElementById("item-upperbody").style.filter = "hue-rotate(" + colorDegree + "deg)";
 }
 
 function colorgreen(){
-    document.getElementById("tpic").style.filter = "hue-rotate(120deg)";
+    document.getElementById("item-upperbody").style.filter = "hue-rotate(120deg)";
 }
 function colorred(){
-    document.getElementById("tpic").style.filter= "hue-rotate(0deg)";
+    document.getElementById("item-upperbody").style.filter= "hue-rotate(0deg)";
 }
 function colorblue(){
-    document.getElementById("tpic").style.filter= "hue-rotate(240deg)";
+    document.getElementById("item-upperbody").style.filter= "hue-rotate(240deg)";
 }
-var Logos =["batman.png","smile.png","tiktok.png","code.png","smile.png","superman.png","adidaswithtext.png","cat.png","bmw_logo_PNG19714.png","light.png","nikecorrect.png","mercedes_PNG80187.png"];
+function colorblack(){
+    document.getElementById("item-upperbody").style.filter = "brightness(15%)";
+}
+function colorgray(){
+    document.getElementById("item-upperbody").style.filter = "grayscale(100%)";
+}
+var Logos =["batman.png","smile.png","tiktok.png","code.png","smile.png","superman.png","adidaswithtext.png","cat.png","bmw_logo_PNG19714.png","light.png","nikecorrect.png","mercedes_PNG80187.png","EMPTY.png"];
 var newlogo = 0;
 
 function changeLogo(){
+    
+    document.getElementById('item-text').innerHTML = "";
     if(newlogo <Logos.length){
-        document.getElementById("piclogo").src = "assets/images/sticker/" + Logos[newlogo];
+        document.getElementById("item-shirtlogo").src = "assets/images/sticker/" + Logos[newlogo];
         newlogo++;
     }
     else {
         newlogo = 0;
     }
 }
+function changeNOLogo(){
+    document.getElementById("item-muglogo").src = "assets/images/sticker/EMPTY.png";
+}
+
 
 //change mug color and logo
 var colorDegree = 300;
@@ -72,17 +84,28 @@ function colorreed(){
 function colorbluue(){
     document.getElementById("mugpic").style.filter= "hue-rotate(240deg)";
 }
+function colorblaack(){
+    document.getElementById("mugpic").style.filter = "grayscale(1) brightness(0.25)";
+}
+function colorgraay(){
+    document.getElementById("mugpic").style.filter = "grayscale(100%)";
+}
 var Logos =["batman.png","smile.png","tiktok.png","code.png","smile.png","superman.png","adidaswithtext.png","cat.png","bmw_logo_PNG19714.png","light.png","nikecorrect.png","mercedes_PNG80187.png"];
 var newlogo = 0;
 
 function changeLoogo(){
     if(newlogo <Logos.length){
-        document.getElementById("picloogo").src = "assets/images/sticker/" + Logos[newlogo];
+        document.getElementById("item-muglogo").src = "assets/images/sticker/" + Logos[newlogo];
         newlogo++;
     }
     else {
         newlogo = 0;
     }
+}
+function changetext(){
+    document.getElementById('item-shirtlogo').src = "assets/images/sticker/EMPTY.png";
+    var userinput1 = prompt('enter your name here');
+     document.getElementById('item-text').innerHTML = userinput1;
 }
 
 

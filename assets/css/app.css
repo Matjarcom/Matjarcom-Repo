@@ -1,122 +1,208 @@
 * {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 img {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 18px;
+	font-family: sans-serif;
+	font-size: 18px;
 }
+.row {
+  display: flex;
+}
+
 
 button {
   background: 0;
-  border: solid 2px black;
-  border-radius: 5px;
-  padding: 7.5px 10px;
-  font-weight: bold;
+	border: solid 2px black;
+	border-radius: 5px;
+	padding: 7.5px 10px;
+	font-weight: bold;
+}
+
+.btn {
+  background-color: red;
+  color: whitesmoke;
+  border: 0;
+  padding: 25px 50px;
+  font-size: 24px;
 }
 
 a {
   text-decoration: none;
-  color: orange;
-  font-weight: bold;
+	color: orange;
+	font-weight: bold;
 }
-#my-slots {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-#my-slots .slot {
-  width: 23%;
-  padding: 25px;
-  margin-bottom: 25px;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-header .tabs a {
-  padding: 10px;
-}
+
+/* GENERAL */
+
 main {
-  
   width: 80%;
-  margin: auto;
+	margin: auto;
 }
+
 main h1 {
-    padding: 20px 30px;
-    font-family:cursive
+	padding: 20px 30px;
+	font-family: cursive
 }
 
-#tpic {
-  background-image:url(../images/tshirt.png) ;
-  /* background-color: gray; */
-  height: 500px;
-  width: 500px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
+/* CATEGORIES PAGE */
+
+#cats {
   display: flex;
-  align-items:center;
-  justify-content:center;
-  
+	flex-wrap: wrap;
 }
-#piclogo {
-  width: 170px;
-  padding-bottom: 150px;
+
+#cats .cat {
+  width: 25%;
+	text-align: center;
 }
-/* mug */
+
+#cats .cat a {
+  display: block;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin: 10px;
+	padding: 16px;
+	transition: .3s;
+}
+
+#cats .cat a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#cats .cat img {
+	height: 200px;
+}
+
+#cats .cat p {
+  margin-top: 10px;
+	color: black;
+}
+
+
+/* SHIRT PAGE */
+
+#item {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+  display: flex;
+  flex:2;
+}
+#buttons {
+  flex: 1;
+}
+.details {
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: solid gray 1px;
+}
+.details:nth-last-child(1) {
+  border-bottom: 0;
+}
+.details h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#item-upperbody {
+	background-image: url(../images/tshirt.png);
+	/* background-color: gray; */
+	height: 500px;
+	width: 500px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+#item-shirtlogo {
+	width: 170px;
+	position: absolute;
+	z-index: 2;
+	top: 97px;
+}
+
+#item-text {
+	position: absolute;
+	top: 150px;
+	z-index: 2;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+
+/* MIG PAGE */
+
 #mugpic {
-  background-image:url(../images/hyy.png) ;
-  /* background-color: gray; */
-  height: 450px;
-  width: 450px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items:center;
-  justify-content:60px;
-  
+	background-image: url(../images/hyy.png);
+	/* background-color: gray; */
+	height: 450px;
+	width: 450px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: 60px;
+	position: relative;
+	z-index: 1;
 }
-#picloogo {
-  width: 175px;
-  padding-top: 50px;
-  padding-left: 80px;
-}
-button {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  background-color: yellow;
-  border-radius: 9rem;
-  
+
+#item-muglogo {
+	position: absolute;
+	z-index: 2;
+	width: 175px;
+	padding-right: 86px;
 }
 
 
+/* Buttons colors */
 
-
-
-
-
-
-
-
-/*
-#show-shirt {
-  background-color: gray;
-  background-image: url(../images/tshirt.png);
-  background-size: cover;
-  width: 500px;
-  height: 500px;
+.color-btn {
+  padding-right: 16px;
+  border: 0;
 }
 
-#show-shirt .sticker {
-  background: green;
-  width: 100px;
-  height: 100px;
-}*/
+#black {
+	background-color: black;
+}
+
+#gray {
+	background-color: gray;
+}
+
+#red {
+	background-color: red;
+}
+
+#green {
+	background-color: green;
+}
+
+#blue {
+	background-color: blue;
+}
+
+#lightblue {
+	background-color: lightblue;
+}
+
+#purple {
+	background-color: purple;
+}
+
+#yellow {
+	background-color: yellow;
+}
