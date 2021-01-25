@@ -1,5 +1,6 @@
 "use strict";
 
+// ---------- Creating The Constructor of Products
 var bigContainer = document.getElementById("bigContainer");
 
 function Clothes(img, name, price, gender) {
@@ -10,6 +11,8 @@ function Clothes(img, name, price, gender) {
   Clothes.prototype.allImages.push(this);
 }
 Clothes.prototype.allImages = [];
+Clothes.prototype.cartProducts = [];
+console.log(Clothes.prototype.cartProducts);
 
 // Adding Tshirt products
 new Clothes("Clothes_Images/Tshirt/both.png", "T-shirt", "23 JD", "Both");
@@ -64,7 +67,7 @@ new Clothes("Clothes_Images/pants/girl (9).png", "Pants", "23 JD", "Girl");
 new Clothes("Clothes_Images/pants/girl (10).png", "Pants", "23 JD", "Girl");
 new Clothes("Clothes_Images/pants/girl (11).png", "Pants", "23 JD", "Girl");
 
-for (var i = 0; i <= Clothes.prototype.allImages.length; i++) {
+for (var i = 0; i < Clothes.prototype.allImages.length; i++) {
   // creat a single Product Container and append it in a Big Container
   var singleProductContainer = document.createElement("div");
   bigContainer.appendChild(singleProductContainer);
@@ -72,6 +75,7 @@ for (var i = 0; i <= Clothes.prototype.allImages.length; i++) {
 
   // craet image and append it in singleProductContainer
   var productImage = document.createElement("img");
+  // console.log(productImage);
   singleProductContainer.appendChild(productImage);
   productImage.setAttribute("src", Clothes.prototype.allImages[i].img);
   productImage.setAttribute("width", "300px");
@@ -97,12 +101,29 @@ for (var i = 0; i <= Clothes.prototype.allImages.length; i++) {
   productGender.setAttribute("class", "productGenderClass");
 
   //creat the button of Add to Cart and append it in singleProductContainer
-  var addToCartButton = document.createElement("input");
-  singleProductContainer.appendChild(addToCartButton);
-  addToCartButton.setAttribute("class", "addToCartButton");
-  addToCartButton.setAttribute("type", "submit");
-  addToCartButton.setAttribute("value", "Add To Cart");
-  var spanOfAddToCartButton = document.createElement("span");
-  addToCartButton.appendChild(spanOfAddToCartButton);
-  spanOfAddToCartButton.textContent = "Add to Cart";
+  var buyNowButton = document.createElement("input");
+  singleProductContainer.appendChild(buyNowButton);
+  buyNowButton.setAttribute("class", "buyNowButton");
+  buyNowButton.setAttribute("type", "button");
+  buyNowButton.setAttribute("value", "Buy Now");
+  buyNowButton.setAttribute("onclick", "location.href='singlrProduct.html';");
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////
+}
+
+//................ Add Event Listener to take the product from Buy Now Button
+var buyNowButtonProduct = document.getElementsByClassName("buyNowButton");
+// var productList = [];
+// console.log(addToCartButtonProduct);
+// console.log(productList);
+for (let x = 0; x < buyNowButtonProduct.length; x++) {
+  buyNowButtonProduct[x].addEventListener("click", updatingCart);
+  function updatingCart(event) {
+    console.log("I am in");
+    // set the Products inside a local storage
+    localStorage.setItem(
+      "productObj",
+      JSON.stringify(Clothes.prototype.allImages[x])
+    );
+  }
 }
