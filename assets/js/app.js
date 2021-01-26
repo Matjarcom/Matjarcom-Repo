@@ -57,9 +57,7 @@ function changeLogo(){
         newlogo = 0;
     }
 }
-function changeNOLogo(){
-    document.getElementById("item-muglogo").src = "assets/images/sticker/EMPTY.png";
-}
+
 
 
 //change mug color and logo
@@ -94,6 +92,7 @@ var Logos =["batman.png","smile.png","tiktok.png","code.png","smile.png","superm
 var newlogo = 0;
 
 function changeLoogo(){
+     document.getElementById('item-textm').innerHTML = "";
     if(newlogo <Logos.length){
         document.getElementById("item-muglogo").src = "assets/images/sticker/" + Logos[newlogo];
         newlogo++;
@@ -106,6 +105,11 @@ function changetext(){
     document.getElementById('item-shirtlogo').src = "assets/images/sticker/EMPTY.png";
     var userinput1 = prompt('enter your name here');
      document.getElementById('item-text').innerHTML = userinput1;
+}
+function changetexxt(){
+    document.getElementById('item-muglogo').src = "assets/images/sticker/EMPTY.png";
+    var userinput1 = prompt('enter your name here');
+     document.getElementById('item-textm').innerHTML = userinput1;
 }
 
 

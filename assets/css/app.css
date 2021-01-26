@@ -114,7 +114,7 @@ main h1 {
 
 #item-upperbody {
 	background-image: url(../images/tshirt.png);
-	/* background-color: gray; */
+	
 	height: 500px;
 	width: 500px;
 	background-size: contain;
@@ -147,26 +147,32 @@ main h1 {
 
 #mugpic {
 	background-image: url(../images/hyy.png);
-	/* background-color: gray; */
-	height: 450px;
-	width: 450px;
+	height: 500px;
+	width: 500px;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	display: flex;
 	align-items: center;
-	justify-content: 60px;
+	justify-content: center;
 	position: relative;
 	z-index: 1;
 }
 
 #item-muglogo {
+	width: 170px;
 	position: absolute;
 	z-index: 2;
-	width: 175px;
-	padding-right: 86px;
+	top: 150px;
+    left: 335px;
 }
-
+#item-textm {
+	position: absolute;
+	top: 150px;
+	z-index: 2;
+	font-size: 32px;
+	font-weight: bold;
+}
 
 /* Buttons colors */
 

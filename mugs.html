@@ -13,22 +13,44 @@
 
         <!-- mag -->
         <h1>mugs</h1>
-        <div id="item">
-            <img id="item-muglogo" src="assets/images/sticker/light.png" alt="hh">
-            <div id="mugpic">
+        <div class="row">
+            
+            <div id="item">
+                <img id="item-muglogo" src="assets/images/sticker/EMPTY.png" alt="hh">
+                <p id="item-textm"></p>
+                <div id="mugpic">
+                </div>
             </div>
-        </div>
-
-        <button onclick="colorNext()"> < </button>
-        <button onclick="colorBack()"> > </button>
-
-        <button id="lightblue" onclick="colorgreeen()"></button>
-        <button id="yellow" onclick="colorreed()"></button>
-        <button id="purple" onclick="colorbluue()"></button>
-        <button id="black" onclick="colorblaack()"></button>
-        <button id="gray" onclick="colorgraay()"></button>
+            <div class="details">
+                <h3>colors</h3>
+                <div id="buttons">
+            <button onclick="colorNext()"> < </button>
+            <button onclick="colorBack()"> > </button>
         
-        <button onclick="changeLoogo()">change logo</button>
+            <button class="color-btn" id="lightblue" onclick="colorgreeen()">&nbsp;</button>
+            <button class="color-btn" id="yellow" onclick="colorreed()">&nbsp;</button>
+            <button class="color-btn" id="purple" onclick="colorbluue()">&nbsp;</button>
+            <button class="color-btn" id="black" onclick="colorblaack()">&nbsp;</button>
+            <button class="color-btn" id="gray" onclick="colorgraay()">&nbsp;</button>
+            </div>
+            <div class="details">
+                <h3>logos</h3>
+            <button onclick="changeLoogo()">change logo</button>
+        </div>
+        <div class="details">
+            <h3>add your text</h3>
+            <button onclick="changetexxt()"> enter your name </button>
+        </div>
+        <div class="details">
+            <h3>price</h3>
+            <h2>10 JD</h2>
+        </div>
+        <div class="details">
+            <button class="btn">add to cart</button>
+        </div>
+    </div>
+        </div>
+            
 
     </main>
     <script src="assets/js/app.js"></script>
