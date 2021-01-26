@@ -1,56 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Product</title>
-    <link rel="stylesheet" href="css/singleProductStyle.css">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    rel="stylesheet"
+  />
+    <title>Custom T-Shirt</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
 </head>
+
 <body>
     <header>
-        <div class="first-header">
-          <div>
-            <i class="fas fa-shipping-fast"></i><span>Free Fast Delivery</span>
-            <i class="fas fa-medal"></i><span>BEST PRICES EVERYDAY</span>
-            <i class="fas fa-cart-plus"></i><span>WIDEST CHOICE</span>
-          </div>
-          <div>
+        <nav>
+            <div class="logo-side">
+              <img src="img/logo.png" alt="logo" width="75" />
+              <a href="index.html">MATJAR.COM</a>
+            </div>
+            <div class="nav-list">
+              <a href="index.html"> HOME</a>
+              <div class="dropdown">
+                <a class="dropbtn" href="Products.html" onclick=" localStorage.clear()">PRODUCTS  <i class="fas fa-sort-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="Products.html" id="pantClick" >PANTS</a>
+                  <a href="Products.html" id="shirtClick" >SHIRTS</a>
+                  <a href="Products.html" id="toyClick">TOYS</a>
+                  <a href="Products.html" id="bookClick">BOOKS</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <a  href="Products.html"class="dropbtn" id="customClick2">CUSTOM ORDER  <i class="fas fa-sort-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="">T-SHIRT</a>
+                  <a href="">MUG</a>
+                </div>
+              </div>
+              <a href="contactus.html">ABOUT US</a>
+            </div>
+            <div class="search">
+              <form id="search-form">
+                <input type="text" id="search" placeholder="SEARCH" />
+                <button type="submit" id="search-btn">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </nav>
+      </header>
+    <main>
+
+        <!-- tshirt -->
+        <h1 class="page-name">CUSTOM ORDER > Shirts</h1>
+        <div class="row">
+
+            <div id="item">
+                <img id="item-shirtlogo" src="assets/images/sticker/EMPTY.png" >
+                <p id="item-text"></p>
+                <div id="item-upperbody">
+                </div>
+            </div>
+    
+            <div id="buttons">
+             
+                <div class="details">
+                    <h3>LOGO :</h3>
+                    <button onclick="changeLogo()" class="change-btn">Change logo </button>
+                </div>
+                <div class="details">
+                    <h3>ADD YUOR TEXT</h3>
+                    <button onclick="changetext()" class="change-btn"> Enter your name </button>
+                </div>
+                   <div class="details">
+                    
+                    <button onclick="colorchangeNext()" class="arrows"> <i class="fas fa-arrow-alt-circle-left"></i> </button>
+                    
+                    <button class="color-btn" id="green" onclick="colorgreen()">&nbsp;</button>
+                    <button class="color-btn" id="red" onclick="colorred()">&nbsp;</button>
+                    <button class="color-btn" id="blue" onclick="colorblue()">&nbsp;</button>
+                    <button class="color-btn" id="black" onclick="colorblack()">&nbsp;</button>
+                    <button class="color-btn" id="gray" onclick="colorgray()">&nbsp;</button>
+                    <button onclick="colorchangeBack()" class="arrows"> <i class="fas fa-arrow-alt-circle-right"></i> </button>
+            
+                </div>
+                <div class="details ">
+                    <h3>SIZE :</h3>
+                    <form id="size" name="size">
+                    <input type="radio" id="sizeXl" name="size" value="xl"> <label>XL</label>
+                    <input type="radio" id="sizeL" name="size" value="l"><label>L</label>
+                    <input type="radio" id="sizeM" name="size" value="m"><label>M</label>
+                    <input type="radio" id="sizeS" name="size" value="s"><label>S</label>
+                    </form>
+                </div>
+                <div class="details">
+                    <h3>PRICE</h3>
+                    <span>25 JD</span>
+                </div>
+                <div class="details">
+                    <button class="btn">add to cart</button>
+                </div>
+        
+                
+        
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div class="footer">
+          <h1>OUR CATEGORIES</h1>
+          <a href="">PANTS</a>
+          <a href="">SHIRTS</a>
+          <a href="">TOYS</a>
+          <a href="">BOOKS</a>
+          <a href="">CUSTOM ORDER</a>
+        </div>
+  
+        <div class="footer">
+          <h1>CONTACT US </h1>
+          <a href="" >ABOUT US</a>
+          <a>Email: matjar@gmail.com</a>
+          <a >+78888888888</a>
+          <a>+7999999999</a>
+          <div >
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
           </div>
-        </div>
-        <nav>
-          <div class="logo-side">
-            <img src="img/logo.png" alt="logo" width="75" />
-            <a href="index.html">MATJAR.COM</a>
-          </div>
   
-          <div class="nav-list">
-            <a href="index.html"> HOME</a>
-            <a href="Products.html" id="pantClick" >PANTS</a>
-            <a href="Products.html" id="shirtClick" >SHIRTS</a>
-            <a href="Products.html" id="customClick">CUSTOM ORDER</a>
-            <a href="Products.html" id="toyClick">TOYS</a>
-            <a href="Products.html" id="bookClick">BOOKS</a>
-            <a href="">CONTACT US</a>
-          </div>
-          <div class="search">
-            <form id="search-form">
-              <input type="text" id="search-input" placeholder="SEARCH" />
-              <button type="submit" id="search-btn">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-          </div>
-        </nav>
-      </header>
-      <main>
-        <div id="singleProduct">
         </div>
-    </main>
-    <footer></footer>
+  
+        <div class="footer footer-logo">
+          <img src="img/logo.png" width="100">
+          <a href="index.html">MATJAR.COM</a>
+        </div>
+        
+  
+      </footer>
+    <script src="assets/js/app.js"></script>
 </body>
 
-<script src="js/singleProductJS.js"></script>
 </html>

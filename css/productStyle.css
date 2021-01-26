@@ -14,7 +14,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 display: inline-block;
-margin: auto;
+margin: 20px auto;
 height: 400px !important;
 text-align: left;
 

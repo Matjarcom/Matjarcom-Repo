@@ -4,15 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    rel="stylesheet"
+  />
+    <title>Custom T-Shirt</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
 </head>
 
 <body>
+  <header>
+    <nav>
+        <div class="logo-side">
+          <img src="img/logo.png" alt="logo" width="75" />
+          <a href="index.html">MATJAR.COM</a>
+        </div>
+        <div class="nav-list">
+          <a href="index.html"> HOME</a>
+          <div class="dropdown">
+            <a class="dropbtn" href="Products.html" onclick=" localStorage.clear()">PRODUCTS  <i class="fas fa-sort-down"></i></a>
+            <div class="dropdown-content">
+              <a href="Products.html" id="pantClick" >PANTS</a>
+              <a href="Products.html" id="shirtClick" >SHIRTS</a>
+              <a href="Products.html" id="toyClick">TOYS</a>
+              <a href="Products.html" id="bookClick">BOOKS</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a  href="custom.html"class="dropbtn" id="customClick2">CUSTOM ORDER  <i class="fas fa-sort-down"></i></a>
+            <div class="dropdown-content">
+              <a href="tshirts.html">T-SHIRT</a>
+              <a href="mugs.html">MUG</a>
+            </div>
+          </div>
+          <a href="contactus.html">ABOUT US</a>
+        </div>
+        <div class="search">
+          <form id="search-form">
+            <input type="text" id="search" placeholder="SEARCH" />
+            <button type="submit" id="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </nav>
+  </header>
     <main>
 
         <!-- mag -->
-        <h1>mugs</h1>
+        <h1 class="page-name">CUSTOM ORDER > MUG </h1>
+
+        
         <div class="row">
             
             <div id="item">
@@ -21,39 +68,77 @@
                 <div id="mugpic">
                 </div>
             </div>
-            <div class="details">
-                <h3>colors</h3>
-                <div id="buttons">
-            <button onclick="colorNext()"> < </button>
-            <button onclick="colorBack()"> > </button>
-        
-            <button class="color-btn" id="lightblue" onclick="colorgreeen()">&nbsp;</button>
-            <button class="color-btn" id="yellow" onclick="colorreed()">&nbsp;</button>
-            <button class="color-btn" id="purple" onclick="colorbluue()">&nbsp;</button>
-            <button class="color-btn" id="black" onclick="colorblaack()">&nbsp;</button>
-            <button class="color-btn" id="gray" onclick="colorgraay()">&nbsp;</button>
+            <div id="buttons">
+             
+                <div class="details">
+                    <h3>LOGO :</h3>
+                    <button onclick="changeLoogo()" class="change-btn">Change logo :</button>
+                </div>
+                <div class="details">
+                    <h3>ADD YUOR TEXT</h3>
+                    <button onclick="changetexxt()" class="change-btn"> Enter your name :</button>
+                </div>
+                   <div class="details">
+                    
+                    <button onclick="colorNext()" class="arrows"> <i class="fas fa-arrow-alt-circle-left"></i> </button>
+                    
+                    <button class="color-btn" id="lightblue" onclick="colorgreeen()">&nbsp;</button>
+                    <button class="color-btn" id="yellow" onclick="colorreed()">&nbsp;</button>
+                    <button class="color-btn" id="purple" onclick="colorbluue()">&nbsp;</button>
+                    <button class="color-btn" id="black" onclick="colorblaack()">&nbsp;</button>
+                    <button class="color-btn" id="gray" onclick="colorgraay()">&nbsp;</button>
+
+                   
+                    <button onclick="colorBack()" class="arrows"> <i class="fas fa-arrow-alt-circle-right"></i> </button>
+            
+                </div>
+                <div class="details">
+                    <h3>PRICE</h3>
+                    <span>10 JD</span>
+                </div>
+                <div class="details">
+                    <button class="btn">add to cart</button>
+                </div>
             </div>
-            <div class="details">
-                <h3>logos</h3>
-            <button onclick="changeLoogo()">change logo</button>
-        </div>
-        <div class="details">
-            <h3>add your text</h3>
-            <button onclick="changetexxt()"> enter your name </button>
-        </div>
-        <div class="details">
-            <h3>price</h3>
-            <h2>10 JD</h2>
-        </div>
-        <div class="details">
-            <button class="btn">add to cart</button>
-        </div>
-    </div>
         </div>
             
 
     </main>
-    <script src="assets/js/app.js"></script>
+  
+</body>
+<footer>
+    <div class="footer">
+      <h1>OUR CATEGORIES</h1>
+      <a href="">PANTS</a>
+      <a href="">SHIRTS</a>
+      <a href="">TOYS</a>
+      <a href="">BOOKS</a>
+      <a href="">CUSTOM ORDER</a>
+    </div>
+
+    <div class="footer">
+      <h1>CONTACT US </h1>
+      <a href="" >ABOUT US</a>
+      <a>Email: matjar@gmail.com</a>
+      <a >+78888888888</a>
+      <a>+7999999999</a>
+      <div >
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+
+    </div>
+
+    <div class="footer footer-logo">
+      <img src="img/logo.png" width="100">
+      <a href="index.html">MATJAR.COM</a>
+    </div>
+    
+
+  </footer>
+<script src="assets/js/app.js"></script>
 </body>
 
 </html>
+
