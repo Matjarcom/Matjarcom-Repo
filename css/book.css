@@ -1,0 +1,24 @@
+.container {
+    background-image: url(../bookimg/shelf.jpg);
+    height: 500px;
+    width: 100%;
+}
+img {
+    height: 200px;
+    width: 200px;
+    border:  10px solid #BCAAA4;
+    margin-top: 10px;
+    margin-left: 11px;
+}
+/* #girimg {
+    position: absolute;
+    margin-right: 300px;
+} */
+.container{
+    display: flex;
+}
+.col{
+    flex: 33.33%;
+    padding: 15px;
+    
+}
