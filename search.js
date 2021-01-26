@@ -77,6 +77,7 @@ creatPants();
        
     }
     createBook();
+    // Creare the search function 
     var form = document.getElementById('search-form')
   form.addEventListener('submit',searchForm);
   var input;
@@ -107,6 +108,16 @@ creatPants();
             if(products.prototype.toysArray[i].cName.includes(input)){
            
             }else if(products.prototype.toysArray[i].cIformation.includes(input)){
+               
+            }
+            else{
+              
+            }   
+         }
+         for(var i =0; i< products.prototype.bookArray.length;i++){
+            if(products.prototype.bookArray[i].cName.includes(input)){
+           
+            }else if(products.prototype.bookArray[i].cIformation.includes(input)){
                
             }
             else{
