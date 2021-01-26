@@ -168,7 +168,7 @@ function renderItems(rendArrray,event){
                 var blink=document.createElement('a');
                 blink.className='buy';
                 blink.textContent='Buy Now';
-                blink.href='#';
+                blink.href='singlrProduct.html';
                 H3.textContent=rendArrray[j].cName;
                 H2.className='price';
                 H2.textContent='$'+rendArrray[j].cPrice;
@@ -178,9 +178,25 @@ function renderItems(rendArrray,event){
                //if(window.)
                 bodymain.appendChild(rowDiv);
             }
+            //................ Add Event Listener to take the product from Buy Now Button
+var buyNowButtonProduct = document.getElementsByClassName("buy");
+
+for (let x = 0; x < buyNowButtonProduct.length; x++) {
+  buyNowButtonProduct[x].addEventListener("click", updatingCart);
+  function updatingCart(event) {
+    console.log("I am in");
+    // set the Products inside a local storage
+    localStorage.setItem(
+      "singleProductObj",
+      JSON.stringify(rendArrray[x])
+    );
+  }
+}
+
 
 
     }
 
 
 }
+
