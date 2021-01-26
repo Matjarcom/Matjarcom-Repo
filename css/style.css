@@ -10,21 +10,13 @@ body{
 }
 header{
     height: fit-content;
-    background-color:#fff;
+    background-color: rgb(55, 55, 97);
   
 
 }
 nav div{
     display: inline-block;
 }
-
-.drop-down-list{
-
-
-}
-
-
-
 
 .dropdown {
   position: relative;
@@ -35,9 +27,9 @@ nav div{
   display: none;
   position: absolute;
   top: 50px;
-  background-color: #fff;
+  background-color: rgb(55, 55, 97);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 1 !important;
 
 }
 
@@ -46,6 +38,7 @@ nav div{
   display: block;
   height: 50px;
   padding: 0px 20px;
+  z-index: 1 !important;
 
 }
 
@@ -68,7 +61,7 @@ nav div{
     position: relative;
     bottom: 3px;
     right: 25px;
-    background: -webkit-linear-gradient(rgb(0, 183, 255),#cfb717e8,rgb(231, 72, 99),rgb(92, 7, 92));
+    background: -webkit-linear-gradient(rgb(121, 177, 199),#ccbd58e8,rgb(231, 135, 151),rgb(116, 13, 116));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 1;
@@ -83,7 +76,7 @@ nav div{
     margin: 10px;
     font-weight: 900;
     font-size: 17px;  
-    color: #4d375d ;
+    color: white;
 
 }
 .nav-list a:hover{
@@ -123,7 +116,7 @@ main{
     border-radius: 5px;
     padding: 5px;
     border: none;
-    background-color: rgba(231, 72, 197, 0.253);
+    background-color:rgba(220, 220, 220, 0.548);
 
 }
 
@@ -132,9 +125,9 @@ main{
     width: 28px;
     height: 25px;
     border: none;
-    background-color:rgb(231, 72, 197);
+    background-color:gainsboro;
     font-size: 15px;
-    color: #fff;
+    color: rgb(55, 55, 97);
 
 }
 #search-btn i{
@@ -194,7 +187,7 @@ main{
 }
 
 .sale{
-    margin:100px 0px ;
+    margin: 0px ;
     border:70px solid rgb(55, 55, 97);
     font-size: medium;
     text-align: center;
@@ -225,7 +218,7 @@ del {
 .count-down{
     float: right;
     position: relative;
-    top: 130px;
+    top: 20px;
     margin-right: 70px;
 
 }
@@ -240,7 +233,7 @@ del {
     margin-left:10px ;
 }
 .custom-sale{
- 
+   margin-top: 100px;
     text-align: center;
 
 }
@@ -255,12 +248,12 @@ del {
     height: 300px;
 }
 .custom-piece-img{
-    background-color:  rgb(55, 55, 97);
+    background-color: gainsboro;
     padding: 40px;
     margin: 10px;
     display: inline-block;
-    border-radius: 50%;  
-    box-shadow: 3px 3px #ffe227af;
+    border-radius: 50%;
+    box-shadow: 3px 3px rgb(55, 55, 97);
 
     
 }
@@ -281,8 +274,8 @@ footer{
 .footer{
     display: inline-block;
     color:  rgb(231, 72, 197);
-    margin:50px;
-    padding:  0px 80px;
+    margin:20px 50px;
+    padding:  0px 77px;
     height: 180px;   
 }
 .footer h1{
@@ -310,11 +303,11 @@ footer{
     margin: 5px;
 }
 .footer i:hover ,.footer a:hover{
-    color:#ffe227af;
+    color: gainsboro;
 }
 
 .free-shipping{
-    background-color: #ffe227af;
+    background-color: gainsboro;
     text-align: center;
     color: rgb(55, 55, 97);
     line-height: 1.5;
