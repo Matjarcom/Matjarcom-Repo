@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+}
+
+#cart {
+    width: 80%;
+    margin: auto;
+}
+.cart-item {
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+.spec {
+    padding: 10px;
+}
+.spec:nth-last-child(1) {
+    background-color: rgb(218, 218, 218);
+    margin-left: auto;
+}
+
+#quan {
+    width: 50px;
+}
+.total {
+    background-color:black;
+    color:white;
+    padding: 10px;
+}
