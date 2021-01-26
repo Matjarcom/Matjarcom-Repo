@@ -1,3 +1,10 @@
+.singleProductDetailesContainer{
+    float: right;
+    top: 600px;
+    right: 200px;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
@@ -10,13 +17,18 @@ body{
 }
 header{
     height: fit-content;
-    background-color: rgb(55, 55, 97);
+    background-color:#fff;
   
 
 }
 nav div{
     display: inline-block;
 }
+
+
+
+
+
 
 .dropdown {
   position: relative;
@@ -27,9 +39,9 @@ nav div{
   display: none;
   position: absolute;
   top: 50px;
-  background-color: rgb(55, 55, 97);
+  background-color: #fff;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1 !important;
+  z-index: 1;
 
 }
 
@@ -38,7 +50,6 @@ nav div{
   display: block;
   height: 50px;
   padding: 0px 20px;
-  z-index: 1 !important;
 
 }
 
@@ -54,18 +65,7 @@ nav div{
     margin: 10px 0px 0px 30px;
 
 }
-.logo-side a, .footer-logo a:last-child{  
-    font-family: 'Indie Flower', cursive;
-    font-weight: 700;
-    font-size: 25px;
-    position: relative;
-    bottom: 3px;
-    right: 25px;
-    background: -webkit-linear-gradient(rgb(121, 177, 199),#ccbd58e8,rgb(231, 135, 151),rgb(116, 13, 116));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 1;
-}
+
 .nav-list{
   
     margin: 10px 10px 0px 10% ;
@@ -76,7 +76,7 @@ nav div{
     margin: 10px;
     font-weight: 900;
     font-size: 17px;  
-    color: white;
+    color: #4d375d ;
 
 }
 .nav-list a:hover{
@@ -116,7 +116,7 @@ main{
     border-radius: 5px;
     padding: 5px;
     border: none;
-    background-color:rgba(220, 220, 220, 0.548);
+    background-color: rgba(231, 72, 197, 0.253);
 
 }
 
@@ -125,9 +125,9 @@ main{
     width: 28px;
     height: 25px;
     border: none;
-    background-color:gainsboro;
+    background-color:rgb(231, 72, 197);
     font-size: 15px;
-    color: rgb(55, 55, 97);
+    color: #fff;
 
 }
 #search-btn i{
@@ -187,7 +187,7 @@ main{
 }
 
 .sale{
-    margin: 0px ;
+    margin:100px 0px ;
     border:70px solid rgb(55, 55, 97);
     font-size: medium;
     text-align: center;
@@ -218,7 +218,7 @@ del {
 .count-down{
     float: right;
     position: relative;
-    top: 20px;
+    top: 130px;
     margin-right: 70px;
 
 }
@@ -233,7 +233,7 @@ del {
     margin-left:10px ;
 }
 .custom-sale{
-   margin-top: 100px;
+ 
     text-align: center;
 
 }
@@ -248,12 +248,12 @@ del {
     height: 300px;
 }
 .custom-piece-img{
-    background-color: gainsboro;
+    background-color:  rgb(55, 55, 97);
     padding: 40px;
     margin: 10px;
     display: inline-block;
-    border-radius: 50%;
-    box-shadow: 3px 3px rgb(55, 55, 97);
+    border-radius: 50%;  
+    box-shadow: 3px 3px #ffe227af;
 
     
 }
@@ -274,8 +274,8 @@ footer{
 .footer{
     display: inline-block;
     color:  rgb(231, 72, 197);
-    margin:20px 50px;
-    padding:  0px 77px;
+    margin:50px;
+    padding:  0px 80px;
     height: 180px;   
 }
 .footer h1{
@@ -303,11 +303,11 @@ footer{
     margin: 5px;
 }
 .footer i:hover ,.footer a:hover{
-    color: gainsboro;
+    color:#ffe227af;
 }
 
 .free-shipping{
-    background-color: gainsboro;
+    background-color: #ffe227af;
     text-align: center;
     color: rgb(55, 55, 97);
     line-height: 1.5;
@@ -321,112 +321,5 @@ footer{
 }
 .free-shipping h2{
     font-size:larger;
-}
-
-
-
-/*---------- contact us page style -------------- */
-.contact{
-    margin: 50px 0px;
-}
-.contact > div{
-    border-radius:100px;
-    margin:10px auto;
-    padding: 30px;
-    width: 960px;
-    height:190px;
-   
-}
-
-.contact-par{
-    display: inline-block;
-    width: 60%;
-    font-size:large;
-    position: relative;
-    bottom: 65px;
-
-}
-.contact-par h1{
-    margin-bottom: 20px;
-    font-size: xx-large;
-    font-weight: 900;
-    font-family: 'Hachi Maru Pop', cursive;
-}
-
-.rigth-img .contact {
-    float: right;
-
-}
-.bk-pink{
-    background-color: #f6d6ad}
-.pink:after{
- 
-    border: 93px solid #f6d6ad;
-}
-
-.bk-blue{
-    background-color: rgb(205, 222, 224);
-}
-.blue:after{
- 
-    border: 93px solid rgb(205, 222, 224);
-}
-
-
-
-.bk-yellow{
-    background-color: #fafcc2;
-}
-.yellow:after{
- 
-    border: 93px solid #fafcc2;}
-
-
-.bk-green{
-    background-color: #ccf6c8
-}
-.green:after{
- 
-    border: 93px solid  #ccf6c8
-}
-
-
-.bk-purple{
-    background-color: rgb(211, 200, 210);
-}
-.purple:after{
- 
-    border: 93px solid rgb(211, 200, 210);
-}
-
-
-
-.flag {
-    display: inline;
-    position: relative;
-
-  }
-  .rigth-img-cutting{
-    bottom: 29px;
-    left: 60px;
-  }
-  .left-img-cutting{
-    bottom: 30px;
-    right:30px;
-  }
-  .rigth-img-cutting:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    border-bottom: 158px solid transparent;
-    border-right: 55px solid transparent;
-  }
-
-  .left-img-cutting:after{
-    position: absolute;
-    content: "";
-    right: 0px;
-    border-top: 157px solid transparent;
-    border-left: 55px solid transparent;
 }
 

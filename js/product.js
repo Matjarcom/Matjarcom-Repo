@@ -1,6 +1,7 @@
 
 "use strict"; 
 
+
 //take the link id 
 var pantclick=document.getElementById('pantClick');
 var shirtclick=document.getElementById('shirtClick');
@@ -69,7 +70,8 @@ products.prototype.pantsArray=[];
     new products('imoji pants','img/pants/pants7.png','pants',14.99,false,false,'best baby red pants');
     new products('Shark Pants','img/pants/pants8.png','pants',16,false,false,'best baby red pants');
     new products('Yellow pants','img/pants/pants9.png','pants',17,false,false,'best baby red pants');
-    renderItems(products.prototype.pantsArray);
+    if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.pantsArray);}
+   
     localStorage.setItem('render',JSON.stringify(products.prototype.pantsArray));
 }
 //to create shirt items
@@ -84,12 +86,14 @@ function  creatShirt(){
     new products('Feliz','img/shirts/shirt7.png','shirts',14.99,false,false,'best baby red pants');
     new products('Daddy','img/shirts/shirt8.png','shirts',16,false,false,'best baby red pants');
     new products('Yellow','img/shirts/shirt9.png','shirts',17,false,false,'best baby red pants');
-    renderItems(products.prototype.shirtArray);
+    if(window.location.pathname==='/Products.html'){renderItems(products.prototype.shirtArray);}
+    
     localStorage.setItem('render',JSON.stringify(products.prototype.shirtArray));
 }
 //to create toys items
 function  createToys(){
     products.prototype.toysArray=[];
+
     new products('Singer of letters','img/toys/toy1.png','toys',19.99,false,false,'small animal toy that sing the letters songs');
     new products('bear','img/toys/toy2.png','toys',15,false,false,'Brown wool Bear');
     new products('blue car','img/toys/toy3.png','toys',15.99,false,false,'small blue car with remote control');
@@ -100,12 +104,17 @@ function  createToys(){
     new products('red car','img/toys/toy8.png','toys',16,false,false,'Baaby red car');
     new products('Bulldozer','img/toys/toy9.png','toys',17,false,false,'sand bulldozer for kids');
     renderItems(products.prototype.toysArray);
+
+//     if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.toysArray);}
+   
+
     localStorage.setItem('render',JSON.stringify(products.prototype.toysArray));
   
 }
 //to create book items
 function  createBook(){
     products.prototype.bookArray=[];
+
 
     new products('Ginger the Girrafe','bookimg/ginger.jpg','book',5.99,false,false,'Read this warm tale of camaraderie and affection set in the wild and beautiful Savannah in our free illustrated kids book. Ginger the giraffe uses her long neck to save the other animals from the blazing forest fire. Follow them in their jungle paths as they all meet with yet another adventure');
     new products('I found a Frog','bookimg/frog.jpg','book',6,false,false,'Something magical was happening in the fish bowl  and he wasn’t  quite ready for what lay in store.  Read this captivating free illustrated book for kids that encourages them to explore and be awed by the many wonders of nature. ');
@@ -120,6 +129,7 @@ function  createBook(){
     localStorage.setItem('render',JSON.stringify(products.prototype.bookArray));
 }
 // to create custum shirt and cup items
+
 // function  createCustum(){
 //     products.prototype.custumArray=[];
 //     new products('jeans','img/pants/pants1.png','custum',19.99,false,false,'best baby pants');
@@ -164,18 +174,35 @@ function renderItems(rendArrray,event){
                 var blink=document.createElement('a');
                 blink.className='buy';
                 blink.textContent='Buy Now';
-                blink.href='#';
+                blink.href='singlrProduct.html';
                 H3.textContent=rendArrray[j].cName;
                 H2.className='price';
                 H2.textContent='$'+rendArrray[j].cPrice;
                 contentbox.appendChild(H3);
                 contentbox.appendChild(H2);
                 contentbox.appendChild(blink);
+               //if(window.)
                 bodymain.appendChild(rowDiv);
             }
+            //................ Add Event Listener to take the product from Buy Now Button
+var buyNowButtonProduct = document.getElementsByClassName("buy");
+
+for (let x = 0; x < buyNowButtonProduct.length; x++) {
+  buyNowButtonProduct[x].addEventListener("click", updatingCart);
+  function updatingCart(event) {
+    console.log("I am in");
+    // set the Products inside a local storage
+    localStorage.setItem(
+      "singleProductObj",
+      JSON.stringify(rendArrray[x])
+    );
+  }
+}
+
 
 
     }
 
 
 }
+
