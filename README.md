@@ -58,15 +58,15 @@ The user can listen to the voice of the products he/she wants
 
 # Our project wireframes 
  # for the home page 
-![home page image1](https://Matjarcom/Matjarcom-Repo.github.com/wirframeimg/home1.png)
- ![home page image2](https://Matjarcom/Matjarcom-Repo.github.com/wirframeimg/home2.png)
+![home page image1](wirframeimg/home1.png)
+ ![home page image2](wirframeimg/home2.png)
  # for products page
- ![Products page](https://Matjarcom/Matjarcom-Repo.github.com/wirframeimg/products.png)
+ ![Products page](wirframeimg/products.png)
  # For single product page 
- ![Single Product page](https://Matjarcom/Matjarcom-Repo.github.com/wirframeimg/singleproduct.png)
+ ![Single Product page](wirframeimg/singleproduct.png)
  # for custom products  
- ![Custom product](https://Matjarcom/Matjarcom-Repo.github.com/wirframeimg/coustom.png)
+ ![Custom product](wirframeimg/coustom.png)
  # for buy cart 
- ![Buy Cart](https://Matjarcom/Matjarcom-Repo.github.com/wirframeimg/butcart.png)
+ ![Buy Cart](wirframeimg/butcart.png)
  # for About us page 
- ![About Us](https://Matjarcom/Matjarcom-Repo.github.com/wirframeimg/aboutus.png)
+ ![About Us](wirframeimg/aboutus.png)
