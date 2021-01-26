@@ -1,0 +1,214 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 18px;
+}
+.row {
+  display: flex;
+}
+
+
+button {
+  background: 0;
+	border: solid 2px black;
+	border-radius: 5px;
+	padding: 7.5px 10px;
+	font-weight: bold;
+}
+
+.btn {
+  background-color: red;
+  color: whitesmoke;
+  border: 0;
+  padding: 25px 50px;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+	color: orange;
+	font-weight: bold;
+}
+
+/* GENERAL */
+
+main {
+  width: 80%;
+	margin: auto;
+}
+
+main h1 {
+	padding: 20px 30px;
+	font-family: cursive
+}
+
+
+/* CATEGORIES PAGE */
+
+#cats {
+  display: flex;
+	flex-wrap: wrap;
+}
+
+#cats .cat {
+  width: 25%;
+	text-align: center;
+}
+
+#cats .cat a {
+  display: block;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin: 10px;
+	padding: 16px;
+	transition: .3s;
+}
+
+#cats .cat a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#cats .cat img {
+	height: 200px;
+}
+
+#cats .cat p {
+  margin-top: 10px;
+	color: black;
+}
+
+
+/* SHIRT PAGE */
+
+#item {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+  display: flex;
+  flex:2;
+}
+#buttons {
+  flex: 1;
+}
+.details {
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: solid gray 1px;
+}
+.details:nth-last-child(1) {
+  border-bottom: 0;
+}
+.details h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#item-upperbody {
+	background-image: url(../images/tshirt.png);
+	
+	height: 500px;
+	width: 500px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+#item-shirtlogo {
+	width: 170px;
+	position: absolute;
+	z-index: 2;
+	top: 97px;
+}
+
+#item-text {
+	position: absolute;
+	top: 150px;
+	z-index: 2;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+
+/* MIG PAGE */
+
+#mugpic {
+	background-image: url(../images/hyy.png);
+	height: 500px;
+	width: 500px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+#item-muglogo {
+	width: 170px;
+	position: absolute;
+	z-index: 2;
+	top: 150px;
+    left: 335px;
+}
+#item-textm {
+	position: absolute;
+	top: 150px;
+	z-index: 2;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+/* Buttons colors */
+
+.color-btn {
+  padding-right: 16px;
+  border: 0;
+}
+
+#black {
+	background-color: black;
+}
+
+#gray {
+	background-color: gray;
+}
+
+#red {
+	background-color: red;
+}
+
+#green {
+	background-color: green;
+}
+
+#blue {
+	background-color: blue;
+}
+
+#lightblue {
+	background-color: lightblue;
+}
+
+#purple {
+	background-color: purple;
+}
+
+#yellow {
+	background-color: yellow;
+}
