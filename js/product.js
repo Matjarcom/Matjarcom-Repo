@@ -1,6 +1,7 @@
 
 "use strict"; 
 
+
 //take the link id 
 var pantclick=document.getElementById('pantClick');
 var shirtclick=document.getElementById('shirtClick');
@@ -69,7 +70,8 @@ products.prototype.pantsArray=[];
     new products('imoji pants','img/pants/pants7.png','pants',14.99,false,false,'best baby red pants');
     new products('Shark Pants','img/pants/pants8.png','pants',16,false,false,'best baby red pants');
     new products('Yellow pants','img/pants/pants9.png','pants',17,false,false,'best baby red pants');
-    renderItems(products.prototype.pantsArray);
+    if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.pantsArray);}
+   
     localStorage.setItem('render',JSON.stringify(products.prototype.pantsArray));
 }
 //to create shirt items
@@ -84,7 +86,8 @@ function  creatShirt(){
     new products('Feliz','img/shirts/shirt7.png','shirts',14.99,false,false,'best baby red pants');
     new products('Daddy','img/shirts/shirt8.png','shirts',16,false,false,'best baby red pants');
     new products('Yellow','img/shirts/shirt9.png','shirts',17,false,false,'best baby red pants');
-    renderItems(products.prototype.shirtArray);
+    if(window.location.pathname==='/Products.html'){renderItems(products.prototype.shirtArray);}
+    
     localStorage.setItem('render',JSON.stringify(products.prototype.shirtArray));
 }
 //to create toys items
@@ -99,7 +102,8 @@ function  createToys(){
     new products('imoji pants','img/toys/toy7.png','toys',14.99,false,false,'best baby red pants');
     new products('Shark Pants','img/toys/toy8.png','toys',16,false,false,'best baby red pants');
     new products('Yellow pants','img/toys/toy9.png','toys',17,false,false,'best baby red pants');
-    renderItems(products.prototype.toysArray);
+    if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.toysArray);}
+   
     localStorage.setItem('render',JSON.stringify(products.prototype.toysArray));
   
 }
@@ -116,18 +120,18 @@ function  createBook(){
     new products('Time to shine','img/books/book7.jpg','book',14.99,false,false,'best baby red pants');
     new products('Disney','img/books/book8.jpg','book',16,false,false,'best baby red pants');
     new products('Jump on in ','img/books/book9.png','book',17,false,false,'best baby red pants');
-    renderItems(products.prototype.bookArray);
+    if(window.location.pathname==='/Products.html') {renderItems(products.prototype.bookArray);}
     localStorage.setItem('render',JSON.stringify(products.prototype.bookArray));
 }
 //to create custum shirt and cup items
-function  createCustum(){
-    products.prototype.custumArray=[];
-    new products('jeans','img/pants/pants1.png','custum',19.99,false,false,'best baby pants');
-    new products('Gray jeans','img/pants/pants2.png','custum',15,false,false,'beatiful pants jeans');
-    renderItems(products.prototype.custumArray);
-    localStorage.setItem('render',JSON.stringify(products.prototype.custumArray));
+// function  createCustum(){
+//     products.prototype.custumArray=[];
+//     new products('jeans','img/pants/pants1.png','custum',19.99,false,false,'best baby pants');
+//     new products('Gray jeans','img/pants/pants2.png','custum',15,false,false,'beatiful pants jeans');
+//     renderItems(products.prototype.custumArray);
+//     localStorage.setItem('render',JSON.stringify(products.prototype.custumArray));
     
-}
+// }
 
 
 
@@ -171,6 +175,7 @@ function renderItems(rendArrray,event){
                 contentbox.appendChild(H3);
                 contentbox.appendChild(H2);
                 contentbox.appendChild(blink);
+               //if(window.)
                 bodymain.appendChild(rowDiv);
             }
 
