@@ -37,9 +37,15 @@ body {
    
 }
 .spec {
+    position: relative;
     width: 200px;
     padding-left: 20px;
     font-size: 20px;
+}
+.spec:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .spec:nth-last-child(1) {
     margin-left: auto;
@@ -48,6 +54,31 @@ body {
     border: 1px solid gray;
     width: 150px;
     height: 150px;
+}
+.spec img.sticker {
+    position: absolute;
+    width: 25%;
+    height: inherit;
+    border: 0;
+}
+.spec.T-Shirt img.sticker {
+    padding-bottom: 30px;
+}
+.spec.Mug img.sticker {
+    padding-right: 30px;
+}
+.spec .sticker-text {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+}
+.spec.Mug .sticker-text {
+    width: 110px;
+    margin-right: 30px;
+    text-align: center;
+}
+.spec.T-Shirt .sticker-text {
+    padding-bottom: 50px;
 }
 .spec button{
     position: relative;

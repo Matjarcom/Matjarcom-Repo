@@ -50,7 +50,7 @@ else {
     creatShirt();
     createToys(); 
     createBook();  
-    localStorage.clear();
+    //localStorage.clear();
    
 }
 

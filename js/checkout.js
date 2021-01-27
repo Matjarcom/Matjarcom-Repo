@@ -9,7 +9,14 @@ function renderCart(){
     else {
         for(var i = 0; i < checkoutProducts.length; i++){
             var item = document.createElement("div");
-            item.innerHTML = '<div class="cart-item"> <div class="spec"> <img src=' + checkoutProducts[i].cimage + ' width="70px"> </div> <div class="spec"> <h>' + checkoutProducts[i].cName + ' </p>  </div> <div class="spec"><p>' + checkoutProducts[i].cType + '</p> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div> <div class="spec"> <b>price</b> <p>' + checkoutProducts[i].cPrice + ' JD</p> </div></div>';
+            if (checkoutProducts[i].sticker != undefined) {
+                // custom shirt
+                item.innerHTML = '<div class="cart-item"> <div class="spec ' + checkoutProducts[i].cIformation + '"> <img src=' + checkoutProducts[i].cimage + ' style="filter: ' + checkoutProducts[i].color +  '"> <span class="sticker-text">' + checkoutProducts[i].text + '</span> <img class="sticker" src=' + checkoutProducts[i].sticker + ' width="40px">  </div> <div class="spec"> <h>' + checkoutProducts[i].cName + ' </p>  </div> <div class="spec"><p>' + checkoutProducts[i].cType + '</p> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div> <div class="spec"> <b>price</b> <p>' + checkoutProducts[i].cPrice + ' JD</p> </div></div>';
+            }
+            else {
+                // not custom
+                item.innerHTML = '<div class="cart-item"> <div class="spec"> <img src=' + checkoutProducts[i].cimage + ' width="70px"> </div> <div class="spec"> <h>' + checkoutProducts[i].cName + ' </p>  </div> <div class="spec"><p>' + checkoutProducts[i].cType + '</p> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div> <div class="spec"> <b>price</b> <p>' + checkoutProducts[i].cPrice + ' JD</p> </div></div>';
+            }
             cartAllItems.appendChild(item);
             total += checkoutProducts[i].cPrice;
         }
