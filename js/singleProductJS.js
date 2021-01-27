@@ -92,9 +92,7 @@ buyNowButton.setAttribute("onclick", "location.href='singlrProduct.html';");
 //buyNowButton.setAttribute("onclick", "location.href='singlrProduct.html';");
 buyNowButton.setAttribute("onclick", "addToCart();");
 
-var myCartButton = document.createElement("a");
-singleProductDetailesContainer.appendChild(myCartButton);
-myCartButton.innerHTML = "<a href='checkout.html'>View My Cart</a>";
+
 
 var myCart = []
 
