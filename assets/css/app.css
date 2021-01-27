@@ -1,22 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 * {
 	padding: 0;
 	margin: 0;
 }
-
-img {
+body{
+	font-family: 'Chakra Petch', sans-serif;
+	color:  rgb(55, 55, 97);
+}
+main >img {
 	max-width: 100%;
 }
 
-body {
+main {
 	font-family: sans-serif;
 	font-size: 18px;
 }
 .row {
   display: flex;
+  padding: 60px 0px;
+  margin: auto;
+  width: 80%;
 }
 
 
-button {
+main >button {
   background: 0;
 	border: solid 2px black;
 	border-radius: 5px;
@@ -24,12 +34,26 @@ button {
 	font-weight: bold;
 }
 
+.page-name{
+    font-family: 'Chakra Petch', sans-serif;
+	font-size:25px;
+	font-weight: 600;
+	color: rgb(55, 55, 97);
+	background-color: gainsboro;
+	padding: 15px 70px;
+
+
+}
+button{
+	font-family: 'Chakra Petch', sans-serif;
+}
 .btn {
-  background-color: red;
+  background-color: rgb(231, 72, 197);
   color: whitesmoke;
   border: 0;
-  padding: 25px 50px;
+  padding: 10px 20px ;
   font-size: 24px;
+  border-radius: 10px;
 }
 
 a {
@@ -38,17 +62,6 @@ a {
 	font-weight: bold;
 }
 
-/* GENERAL */
-
-main {
-  width: 80%;
-	margin: auto;
-}
-
-main h1 {
-	padding: 20px 30px;
-	font-family: cursive
-}
 
 
 /* CATEGORIES PAGE */
@@ -97,6 +110,7 @@ main h1 {
 }
 #buttons {
   flex: 1;
+  padding-top: 30px;
 }
 .details {
   margin-bottom: 16px;
@@ -105,11 +119,6 @@ main h1 {
 }
 .details:nth-last-child(1) {
   border-bottom: 0;
-}
-.details h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
 #item-upperbody {
@@ -164,27 +173,35 @@ main h1 {
 	position: absolute;
 	z-index: 2;
 	top: 150px;
-    left: 335px;
+	left: 198px;
 }
 #item-textm {
-	position: absolute;
-	top: 150px;
-	z-index: 2;
-	font-size: 32px;
-	font-weight: bold;
+    width: 322px;
+    position: absolute;
+    top: 200px;
+    z-index: 2;
+    font-size: 32px;
+    font-weight: bold;
+	left: 117px;
+	text-align: center;
 }
 
 /* Buttons colors */
 
 .color-btn {
-  padding-right: 16px;
+ 
   border: 0;
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgb(55, 55, 97);
+  border-radius: 50%;
 }
 
 #black {
 	background-color: black;
 }
 
+	
 #gray {
 	background-color: gray;
 }
@@ -211,4 +228,68 @@ main h1 {
 
 #yellow {
 	background-color: yellow;
+}
+
+ .arrows{
+	border-radius: 50%;
+	font-size: 25px;
+	margin:  0px 5px;
+	border: none;
+	color: rgb(55, 55, 97);
+	position: relative;
+	top: 4px;
+
+}
+.color-btn:hover{
+	width: 28px;
+	height: 28px;
+	opacity: .8;
+}
+
+.arrows:hover{
+	color:  rgb(231, 72, 197);
+}
+.details{
+	padding-left: 19%;
+	height: 30px;
+	font-family: 'Chakra Petch', sans-serif;
+}
+.details h3{
+	text-align: left;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 900;
+	
+}
+.details form{
+	display: inline-block;
+}
+.change-btn{
+	margin-left: 5px;
+	font-family: 'Chakra Petch', sans-serif;
+	border-radius: 5px;
+	width:130px;
+	height: 30px;
+	color: rgb(55, 55, 97);
+	font-weight: 700;
+	box-shadow: 1px 1px rgb(231, 72, 197)
+
+}
+.change-btn:hover{
+	background-color: rgb(55, 55, 97);
+	color: gainsboro;
+}
+#size label{
+	margin-left: 2px;
+	margin-right: 15px;
+}
+.details span{
+	font-size: x-large;
+	font-weight: 900;
+	color: rgb(231, 72, 197);
+}
+
+#custom-main{
+	width: 55%;
+	margin: 80px auto;
 }
