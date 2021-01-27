@@ -45,11 +45,13 @@ else if(emt){
 
 }
 else {
+    if(window.location.pathname==='/Products.html'){
+        creatPants();
+        creatShirt();
+        createToys(); 
+        createBook(); 
+    }
     
-    creatPants();
-    creatShirt();
-    createToys(); 
-    createBook();  
     //localStorage.clear();
    
 }
@@ -89,11 +91,11 @@ products.prototype.pantsArray=[];
     new products('Gray jeans','img/pants/pants2.png','pants',15,false,false,'beatiful pants jeans');
     new products('pob pants','img/pants/pants3.png','pants',15.99,false,false,'best baby pants pob');
     new products('red pants','img/pants/pants4.png','pants',9.99,false,false,'best baby red pants');
-    new products('normal pants','img/pants/pants5.png','pants',10,false,false,'best baby red pants');
-    new products('Gray pants','img/pants/pants6.png','pants',12.99,false,false,'best baby red pants');
-    new products('imoji pants','img/pants/pants7.png','pants',14.99,false,false,'best baby red pants');
-    new products('Shark Pants','img/pants/pants8.png','pants',16,false,false,'best baby red pants');
-    new products('Yellow pants','img/pants/pants9.png','pants',17,false,false,'best baby red pants');
+    new products('normal pants','img/pants/pants5.png','pants',10,false,false,'small light gray pants');
+    new products('Gray pants','img/pants/pants6.png','pants',12.99,false,false,'small dark gray pants');
+    new products('imoji pants','img/pants/pants7.png','pants',14.99,false,false,' pant with prented imoji ');
+    new products('Shark Pants','img/pants/pants8.png','pants',16,false,false,'pant with shark like style');
+    new products('Yellow pants','img/pants/pants9.png','pants',17,false,false,'yelllo pants with gray lines');
     if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.pantsArray);}
    
     localStorage.setItem('render',JSON.stringify(products.prototype.pantsArray));
@@ -101,15 +103,15 @@ products.prototype.pantsArray=[];
 //to create shirt items
 function  creatShirt(){
     products.prototype.shirtArray=[];
-    new products('africa','img/shirts/shirt1.png','shirts',5,false,false,'africa');
-    new products('big brother','img/shirts/shirt2.png','shirts',15,false,false,'big brother is dog');
-    new products('body bulding','img/shirts/shirt3.png','shirts',15.99,false,false,'best baby pants pob');
-    new products('orange','img/shirts/shirt4.png','shirts',9.99,false,false,'best baby red pants');
-    new products('Unicorn ','img/shirts/shirt5.png','shirts',10,false,false,'best baby red pants');
-    new products('Green','img/shirts/shirt6.png','shirts',12.99,false,false,'best baby red pants');
-    new products('Feliz','img/shirts/shirt7.png','shirts',14.99,false,false,'best baby red pants');
-    new products('Daddy','img/shirts/shirt8.png','shirts',16,false,false,'best baby red pants');
-    new products('Yellow','img/shirts/shirt9.png','shirts',17,false,false,'best baby red pants');
+    new products('africa','img/shirts/shirt1.png','shirts',5,false,false,'shirt with Africa map as a logo');
+    new products('big brother','img/shirts/shirt2.png','shirts',15,false,false,'shirt that you can give as a gift for your big brother');
+    new products('body bulding','img/shirts/shirt3.png','shirts',15.99,false,false,'shirt with body building logo');
+    new products('orange bodysuit','img/shirts/shirt4.png','shirts',9.99,false,false,'Bodysuit used for child from 0-2 months');
+    new products('Unicorn boudysuit','img/shirts/shirt5.png','shirts',10,false,false,'Bodysuit with unicorn logo');
+    new products('Green bodysuit','img/shirts/shirt6.png','shirts',12.99,false,false,'Bodysuit with positive words for your baby');
+    new products('Baby bodysuit','img/shirts/shirt7.png','shirts',14.99,false,false,'small gray bodysuit');
+    new products('Daddy shirt','img/shirts/shirt8.png','shirts',16,false,false,'White shirt with black prented text');
+    new products('Yellow shirt','img/shirts/shirt9.png','shirts',17,false,false,'Yellow shirt with cartoon character image on it');
     if(window.location.pathname==='/Products.html'){renderItems(products.prototype.shirtArray);}
     
     localStorage.setItem('render',JSON.stringify(products.prototype.shirtArray));
@@ -137,15 +139,17 @@ function  createBook(){
     products.prototype.bookArray=[];
 
 
-    new products('Ginger the Girrafe','bookimg/ginger.jpg','book',5.99,false,false,'Read this warm tale of camaraderie and affection set in the wild and beautiful Savannah in our free illustrated kids book. Ginger the giraffe uses her long neck to save the other animals from the blazing forest fire. Follow them in their jungle paths as they all meet with yet another adventure');
-    new products('I found a Frog','bookimg/frog.jpg','book',6,false,false,'Something magical was happening in the fish bowl  and he wasn’t  quite ready for what lay in store.  Read this captivating free illustrated book for kids that encourages them to explore and be awed by the many wonders of nature. ');
-    new products('Hide and seek','bookimg/hide.jpg','book',8.99,false,false,'Was it just another game of hide and seek? No. It was not. First, she fell into a deep, dark hole in the ground and then they found a treasure. Did it end there? No! It did not. Read more about this thrilling adventure of Sally and friends in this free illustrated kids’ book. The fun never ends when Sally’s around!');
-    new products('Doing my chores','img/doing.jpg','book',9.99,false,false,'Love shines through this great illustrated kids’ book . Read how a little girl makes chores fun and easy to do. A fantastic addition to your little one’s free bed time story collection.');
-    new products('Abe the service dog','bookimg/abe.jpg','book',10,false,false,'Abe was a real Service Dog who dedicated his life assisting BJ, a good family friend. Service Dogs are smart, well trained, well behaved, dedicated, and committed to ensuring their master is safe. This book is intended to bring an awareness of their importance to early readers.');
-    new products('Tooth fairy','bookimg/tooth.jpg','book',10.99,false,false,'A wonderful story that weaves its magic in the child’s imagination, even while imparting an invaluable lesson in oral health and hygiene. This is a story that the children will return to time and again for a fun bedtime read.');
-    new products('Captin FAantastic','bookimg/captin.png','book',10.99,false,false,'Dr. Zob’s evil plans had failed once again, thanks to his wonder dog, Winston. They were just were they had to be, with Princess Aura at her birthday party. Read on to find out why Winston deserves a big cuddle and a juicy big bone. A big ‘Woof!’ to this wonderful free children’s story book.');
-    new products('The case of the missing smile','bookimg/missing.jpg','book',7,false,false,'Detective Peterson is trying to find where Sally Sue lost her beautiful smile. And she finds it..right in her heart, hidden from sight. Read this imaginative story of a little girl and how she learnt to smile again in this great free children’s fairy story.');
-    new products('hammy the hamster','bookimg/hammy.jpg','book',8,false,false,'He’s got swag. He wears a tux. He’s a hipster hamster who likes to live free. Join Hammy in his South American home as you read this free story book for kids on your next read aloud day');
+
+    new products('Ginger the Girrafe','bookimg/ginger.jpg','book',5.99,false,false,' Ginger the giraffe uses her long neck to save the other animals from the blazing forest fire.');
+    new products('I found a Frog','bookimg/frog.jpg','book',6,false,false,'Something magical was happening in the fish bowl  and he wasn’t  quite ready for what lay in store.');
+    new products('Hide and seek','bookimg/hide.jpg','book',8.99,false,false,' Adventure of Sally and friends in this book. The fun never ends when Sally’s around!');
+    new products('Doing my chores','img/doing.jpg','book',9.99,false,false,'Little girl makes chores fun and easy to do.A fantastic addition to your little one’s free bed time story collection.');
+    new products('Abe the service dog','bookimg/abe.jpg','book',10,false,false,'Abe was a real Service Dog who dedicated his life assisting BJ,service Dogs are smart, well trained, well behaved, dedicated, and committed to ensuring their master is safe.');
+    new products('Tooth fairy','bookimg/tooth.jpg','book',10.99,false,false,'A wonderful story that weaves its magic in the child’s imagination, in oral health and hygiene.');
+    new products('Captin FAantastic','bookimg/captin.png','book',10.99,false,false,'Read on to find out why Winston deserves a big cuddle and a juicy big bone. A big ‘Woof!’ to this wonderful free children’s story book.');
+    new products('The case of the missing smile','bookimg/missing.jpg','book',7,false,false,' Read this imaginative story of a little girl and how she learnt to smile again in this great free children’s fairy story.');
+    new products('hammy the hamster','bookimg/hammy.jpg','book',8,false,false,'Join Hammy in his South American home as you read this free story book for kids on your next read aloud day');
+
    
     if(window.location.pathname==='/Products.html'){  renderItems(products.prototype.bookArray);}
 
@@ -215,38 +219,41 @@ function renderItems(rendArrray,event){
                 
             }
             
-            //................ Add Event Listener to take the product from Buy Now Button
-var buyNowButtonProduct = document.getElementsByClassName("buy");
 
-for (let x = 0; x < buyNowButtonProduct.length; x++) {
-    console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct.length);
-    console.log('this is listedProduct.length ',listedProduct.length);
-  buyNowButtonProduct[x].addEventListener("click", updatingCart);
-  function updatingCart(event) {
-      if (listedProduct.length == buyNowButtonProduct.length ) {
-        // set the Product inside a local storage
-        localStorage.setItem(
-          "singleProductObj",
-          JSON.stringify(listedProduct[x])
-        ); 
-        console.log('in if'); 
-      }else{
-        localStorage.setItem(
-            "singleProductObj",
-            JSON.stringify(rendArrray[x])
-          ); 
+     
+       //................ Add Event Listener to take the product from Buy Now Button
+       var buyNowButtonProduct = document.getElementsByClassName("buy");
 
-      }
-    
-  }
-}
-
-
+       for (let x = 0; x < buyNowButtonProduct.length; x++) {
+           console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct);
+           console.log('this is listedProduct.length ',listedProduct.length);
+         buyNowButtonProduct[x].addEventListener("click", updatingCart);
+        
+         function updatingCart(event) {
+            localStorage.removeItem('SRG');
+            localStorage.removeItem('render');
+            
+             if (listedProduct.length === buyNowButtonProduct.length ) {
+               // set the Product inside a local storage
+               localStorage.setItem(
+                 "singleProductObj",
+                 JSON.stringify(listedProduct[x])
+               ); 
+               console.log('in if'); 
+             }else{
+               localStorage.setItem(
+                   "singleProductObj",
+                   JSON.stringify(rendArrray[x])
+                 ); 
+       
+             }
+           
+         }
+       }
 
     }
 
 }
-
 
 
 
