@@ -7,7 +7,10 @@ var pantclick=document.getElementById('pantClick');
 var shirtclick=document.getElementById('shirtClick');
 var bookclick=document.getElementById('bookClick');
 var toyclick=document.getElementById('toyClick');
-var customclick=document.getElementById('customClick');
+
+
+//Array for every product renderd by the constructor
+var listedProduct = [];
 
 
 
@@ -19,17 +22,36 @@ bookclick.addEventListener('click',bookRend);
 function bookRend(){createBook();}
 toyclick.addEventListener('click',toyRend);
 function toyRend(){createToys();}
+
+var sRG=JSON.parse(localStorage.getItem('SRG'));
+var emt=localStorage.getItem('emtt');
 var savedata=JSON.parse(localStorage.getItem('render'));
 if(savedata){
     renderItems(savedata);
-    localStorage.clear();
 }
-else{
+
+else if(sRG){
+renderItems(sRG);
+localStorage.removeItem('SRG');
+}
+else if(emt){
+    var bodymain=document.getElementById('main');
+    var h1=document.createElement('h1');
+    h1.textContent=emt;
+    if(window.location.pathname==='/Products.html'){   bodymain.appendChild(h1); localStorage.removeItem('emtt')}
+  
+
+
+
+}
+else {
     
     creatPants();
     creatShirt();
-    createBook();
-    createToys();   
+    createToys(); 
+    createBook();  
+    localStorage.clear();
+   
 }
 
 
@@ -49,14 +71,16 @@ function products(name,img,type,price,custumColor,voice,information){
     this.cColor=custumColor;
     this.cVoice=voice;
     this.cIformation=information;
+    // console.log(products.prototype.listedProduct);
     if(this.cType==='pants'){products.prototype.pantsArray.push(this);}
     if(this.cType==='shirts'){products.prototype.shirtArray.push(this);}
     if(this.cType==='toys'){products.prototype.toysArray.push(this);}
     if(this.cType==='book'){products.prototype.bookArray.push(this);}
     if(this.cType==='custum'){products.prototype.custumArray.push(this);}
-
+    listedProduct.push(this);
+    
 }
-
+// products.prototype.listedProduct=[];
 //to create pants items
 function  creatPants(){
 
@@ -103,13 +127,10 @@ function  createToys(){
     new products('The piano game','img/pianog.png','toys',14.99,false,false,'piano for children');
     new products('red car','img/boytoy4.png','toys',16,false,false,'Baaby red car');
     new products('Bulldozer','img/toys/toy9.png','toys',17,false,false,'sand bulldozer for kids');
-    renderItems(products.prototype.toysArray);
 
-//     if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.toysArray);}
-   
+    if(window.location.pathname==='/Products.html'){  renderItems(products.prototype.toysArray);}
 
     localStorage.setItem('render',JSON.stringify(products.prototype.toysArray));
-  
 }
 //to create book items
 function  createBook(){
@@ -125,7 +146,9 @@ function  createBook(){
     new products('Captin FAantastic','bookimg/captin.png','book',10.99,false,false,'Dr. Zob’s evil plans had failed once again, thanks to his wonder dog, Winston. They were just were they had to be, with Princess Aura at her birthday party. Read on to find out why Winston deserves a big cuddle and a juicy big bone. A big ‘Woof!’ to this wonderful free children’s story book.');
     new products('The case of the missing smile','bookimg/missing.jpg','book',7,false,false,'Detective Peterson is trying to find where Sally Sue lost her beautiful smile. And she finds it..right in her heart, hidden from sight. Read this imaginative story of a little girl and how she learnt to smile again in this great free children’s fairy story.');
     new products('hammy the hamster','bookimg/hammy.jpg','book',8,false,false,'He’s got swag. He wears a tux. He’s a hipster hamster who likes to live free. Join Hammy in his South American home as you read this free story book for kids on your next read aloud day');
-    renderItems(products.prototype.bookArray);
+   
+    if(window.location.pathname==='/Products.html'){  renderItems(products.prototype.bookArray);}
+
     localStorage.setItem('render',JSON.stringify(products.prototype.bookArray));
 }
 // to create custum shirt and cup items
@@ -139,18 +162,20 @@ function  createBook(){
     
 // }
 
-
+// console.log('listedProduct');
 
 //render the items
 function renderItems(rendArrray,event){
 
-   //
+   
  
     var bodymain=document.getElementById('main');
     var cunterJ=0;
        var j =0;
+       
+    //    listedProduct.push(rendArrray);
        //nested loop for show three items every row
-    for(var i =0;i<Math.ceil(rendArrray.length/3) ;i++){
+    for(var i =0;i<Math.ceil(rendArrray.length/4 ) ;i++){
             var rowDiv = document.createElement('div');
             rowDiv.className='maindiv';
             cunterJ+=3;
@@ -183,26 +208,39 @@ function renderItems(rendArrray,event){
                 contentbox.appendChild(blink);
                //if(window.)
                 bodymain.appendChild(rowDiv);
+                
             }
+            
             //................ Add Event Listener to take the product from Buy Now Button
 var buyNowButtonProduct = document.getElementsByClassName("buy");
 
 for (let x = 0; x < buyNowButtonProduct.length; x++) {
+    console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct.length);
+    console.log('this is listedProduct.length ',listedProduct.length);
   buyNowButtonProduct[x].addEventListener("click", updatingCart);
   function updatingCart(event) {
-    console.log("I am in");
-    // set the Products inside a local storage
-    localStorage.setItem(
-      "singleProductObj",
-      JSON.stringify(rendArrray[x])
-    );
+      if (listedProduct.length == buyNowButtonProduct.length ) {
+        // set the Product inside a local storage
+        localStorage.setItem(
+          "singleProductObj",
+          JSON.stringify(listedProduct[x])
+        ); 
+        console.log('in if'); 
+      }else{
+        localStorage.setItem(
+            "singleProductObj",
+            JSON.stringify(rendArrray[x])
+          ); 
+
+      }
+    
   }
 }
 
 
 
-    }
 
+    }
 
 }
 

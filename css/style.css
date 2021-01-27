@@ -432,7 +432,22 @@ footer{
     color: rgb(55, 55, 97);
     background-color: gainsboro;
     padding: 15px 70px;
+}
+
+
+.cart-div a{
+
+    border-radius: 5px;
+    background-color:gainsboro;
+    font-size: 17px;
+    color: rgb(55, 55, 97);
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 1px;
    
-  
+}
+
+.cart-div a:hover , #search-btn:hover{
+    background-color:rgb(201, 196, 196);
 
 }

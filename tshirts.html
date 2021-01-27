@@ -18,42 +18,55 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo-side">
-              <img src="img/logo.png" alt="logo" width="75" />
-              <a href="index.html">MATJAR.COM</a>
+  <header>
+    <nav>
+
+      <div class="logo-side">
+        <img src="img/logo.png" alt="logo" width="75" />
+        <a href="index.html">MATJAR.COM</a>
+      </div>
+
+      <div class="nav-list">
+        <a href="index.html"> HOME</a>
+        
+        <div class="dropdown">
+          <a class="dropbtn" href="Products.html"onclick="localStorage.removeItem('render')">PRODUCTS  <i class="fas fa-sort-down"></i></a>
+          <div class="dropdown-content">
+             
+            <a href="Products.html" id="pantClick" >PANTS</a>
+            <a href="Products.html" id="shirtClick" >SHIRTS</a>
+            <a href="Products.html" id="toyClick">TOYS</a>
+            <a href="Products.html" id="bookClick">BOOKS</a>
+           
+
+          </div>
+
+        </div>
+        
+          <div class="dropdown">
+            <a  href="custom.html"class="dropbtn" id="customClick2">CUSTOM ORDER  <i class="fas fa-sort-down"></i></a>
+            <div class="dropdown-content">
+              <a href="tshirts.html">T-SHIRT</a>
+              <a href="mugs.html">MUG</a>
             </div>
-            <div class="nav-list">
-              <a href="index.html"> HOME</a>
-              <div class="dropdown">
-                <a class="dropbtn" href="Products.html" onclick=" localStorage.clear()">PRODUCTS  <i class="fas fa-sort-down"></i></a>
-                <div class="dropdown-content">
-                  <a href="Products.html" id="pantClick" >PANTS</a>
-                  <a href="Products.html" id="shirtClick" >SHIRTS</a>
-                  <a href="Products.html" id="toyClick">TOYS</a>
-                  <a href="Products.html" id="bookClick">BOOKS</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <a  href="Products.html"class="dropbtn" id="customClick2">CUSTOM ORDER  <i class="fas fa-sort-down"></i></a>
-                <div class="dropdown-content">
-                  <a href="">T-SHIRT</a>
-                  <a href="">MUG</a>
-                </div>
-              </div>
-              <a href="contactus.html">ABOUT US</a>
-            </div>
-            <div class="search">
-              <form id="search-form">
-                <input type="text" id="search" placeholder="SEARCH" />
-                <button type="submit" id="search-btn">
-                  <i class="fas fa-search"></i>
-                </button>
-              </form>
-            </div>
-          </nav>
-      </header>
+          </div>
+          <a href="contactus.html">ABOUT US</a>
+        </div>
+
+        <div class="search">
+          <form id="search-form">
+            <input type="text" id="search" placeholder="SEARCH" />
+            <button type="submit" id="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <div class="cart-div">
+          <a href="checkout.html"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+      </nav>
+
+  </header>
     <main>
 
         <!-- tshirt -->
@@ -115,14 +128,14 @@
 
     </main>
     <footer>
-        <div class="footer">
-          <h1>OUR CATEGORIES</h1>
-          <a href="">PANTS</a>
-          <a href="">SHIRTS</a>
-          <a href="">TOYS</a>
-          <a href="">BOOKS</a>
-          <a href="">CUSTOM ORDER</a>
-        </div>
+      <div class="footer">
+        <h1>OUR CATEGORIES</h1>
+        <a href="/Products.html"  onclick="creatPants()">PANTS</a>
+        <a href="/Products.html" onclick="creatShirt()">SHIRTS</a>
+        <a href="/Products.html" onclick="createToys()">TOYS</a>
+        <a href="/Products.html" onclick="createBook()">BOOKS</a>
+        <a href="/custom.html">CUSTOM ORDER</a>
+      </div>
   
         <div class="footer">
           <h1>CONTACT US </h1>
@@ -145,7 +158,9 @@
         
   
       </footer>
+      <script src="js/search.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="js/product.js"></script>
 </body>
 
 </html>
