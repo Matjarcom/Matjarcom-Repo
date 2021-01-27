@@ -97,11 +97,7 @@ buyNowButton.setAttribute("onclick", "addToCart();");
 
 var myCart = [];
 function addToCart() {
-<<<<<<< HEAD
-  //debugger;
-=======
-  // debugger;
->>>>>>> e8999ce61b2dd5d765a725e420c704507959024b
+
   // Get storaged data if exist old items
   var storaged = localStorage.getItem("cart");
   if (storaged != null) {
