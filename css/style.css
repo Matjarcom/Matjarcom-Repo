@@ -19,14 +19,17 @@ nav div{
 }
 
 .dropdown {
+    line-height: .5;
+
   position: relative;
   display: inline-block;
+  z-index: 1 !important;
 }
 
 .dropdown-content {
+    line-height: .5;
   display: none;
   position: absolute;
-  top: 50px;
   background-color: rgb(55, 55, 97);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1 !important;
@@ -34,22 +37,36 @@ nav div{
 }
 
 .dropdown-content a {
-  text-decoration: none;
+  
   display: block;
-  height: 50px;
-  padding: 0px 20px;
+  padding: 5px 20px;
   z-index: 1 !important;
+  margin: 0px;
 
 }
+.dropdown-content{
+    width: 100%;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+      z-index: 1 !important;
+    }
 
-.dropdown-content a:hover {background-color: #ddd;}
 
-
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+  z-index: 1 !important;
+}
 
 .drop-down-item{
+    height:40px; 
     display: none;
+    z-index: 1 !important;
 }
+
+
+
+
 .logo-side{
     margin: 10px 0px 0px 30px;
 
@@ -112,7 +129,7 @@ main{
   
 }
 
-#search-input{
+#search{
     border-radius: 5px;
     padding: 5px;
     border: none;
@@ -325,7 +342,11 @@ footer{
 
 
 
+
 /*---------- contact us page style -------------- */
+
+
+
 .contact{
     margin: 50px 0px;
 }
@@ -335,15 +356,20 @@ footer{
     padding: 30px;
     width: 960px;
     height:190px;
-   
+    background-color:#eee;
+    color:rgb(55, 55, 97);
+   box-shadow: 2px 2px rgb(55, 55, 97);
 }
+.rigth-shadow{
+    box-shadow: -2px 2px rgb(55, 55, 97) !important;
 
+}
 .contact-par{
     display: inline-block;
     width: 60%;
     font-size:large;
     position: relative;
-    bottom: 65px;
+    bottom: 90px;
 
 }
 .contact-par h1{
@@ -351,55 +377,14 @@ footer{
     font-size: xx-large;
     font-weight: 900;
     font-family: 'Hachi Maru Pop', cursive;
+    color: rgb(231, 72, 197);
+    text-shadow: -2px -2px rgb(55, 55, 97);
 }
 
 .rigth-img .contact {
     float: right;
 
 }
-.bk-pink{
-    background-color: #f6d6ad}
-.pink:after{
- 
-    border: 93px solid #f6d6ad;
-}
-
-.bk-blue{
-    background-color: rgb(205, 222, 224);
-}
-.blue:after{
- 
-    border: 93px solid rgb(205, 222, 224);
-}
-
-
-
-.bk-yellow{
-    background-color: #fafcc2;
-}
-.yellow:after{
- 
-    border: 93px solid #fafcc2;}
-
-
-.bk-green{
-    background-color: #ccf6c8
-}
-.green:after{
- 
-    border: 93px solid  #ccf6c8
-}
-
-
-.bk-purple{
-    background-color: rgb(211, 200, 210);
-}
-.purple:after{
- 
-    border: 93px solid rgb(211, 200, 210);
-}
-
-
 
 .flag {
     display: inline;
@@ -418,15 +403,36 @@ footer{
     content: "";
     position: absolute;
     left: 0;
+    border: 93px solid #eee;
     border-bottom: 158px solid transparent;
     border-right: 55px solid transparent;
   }
+ 
+
 
   .left-img-cutting:after{
     position: absolute;
     content: "";
     right: 0px;
+    border: 93px solid #eee;
     border-top: 157px solid transparent;
     border-left: 55px solid transparent;
 }
 
+
+
+
+
+
+.page-name{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    width: 89.3%;
+    color: rgb(55, 55, 97);
+    background-color: gainsboro;
+    padding: 15px 70px;
+   
+  
+
+}

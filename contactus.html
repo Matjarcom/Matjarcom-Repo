@@ -1,68 +1,50 @@
-<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <title>MATJAR.COM</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="first-header">
-            <div>
-              <i class="fas fa-shipping-fast"></i><span>Free Fast Delivery</span>
-              <i class="fas fa-medal"></i><span>BEST PRICES EVERYDAY</span>
-              <i class="fas fa-cart-plus"></i><span>WIDEST CHOICE</span>
-            </div>
-            <div>
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-instagram"></i>
+
+      <nav>
+        <div class="logo-side">
+          <img src="img/logo.png" alt="logo" width="75" />
+          <a href="index.html">MATJAR.COM</a>
+        </div>
+
+        <div class="nav-list">
+          <a href="index.html" > HOME</a>
+          <div class="dropdown">
+            <a class="dropbtn">PRODUCTS  <i class="fas fa-sort-down"></i></a>
+            <div class="dropdown-content">
+              <a href="Products.html" id="pantClick" >PANTS</a>
+              <a href="Products.html" id="shirtClick" >SHIRTS</a>
+              <a href="Products.html" id="toyClick">TOYS</a>
+              <a href="Products.html" id="bookClick">BOOKS</a>
             </div>
           </div>
-          <nav>
-            <div class="logo-side">
-              <img src="img/logo.png" alt="logo" width="75" />
-              <a href="index.html">MATJAR.COM</a>
+          <div class="dropdown">
+            <a  href="Products.html"class="dropbtn" id="customClick2">CUSTOM ORDER  <i class="fas fa-sort-down"></i></a>
+            <div class="dropdown-content">
+              <a href="">T-SHIRT</a>
+              <a href="">MUG</a>
             </div>
-    
-            <div class="nav-list">
-              <a href="index.html"> HOME</a>
-              <div class="dropdown">
-                <a class="dropbtn" href="Products.html" onclick="localStorage.clear()">PRIDUCTS  <i class="fas fa-sort-down"></i></a>
-                <div class="dropdown-content">
-                  <a href="Products.html" id="pantClick">PANTS</a>
-                  <a href="Products.html" id="shirtClick">SHIRTS</a>
-                  <a href="Products.html"  id="toyClick">TOYS</a>
-                  <a href="Products.html"  id="bookClick">BOOKS</a>
-                 
-                </div>
-              </div>
-              <div class="dropdown">
-                <a  href="Products.html"class="dropbtn" id="customClick2">CUSTOM ORDER  <i class="fas fa-sort-down"></i></a>
-                <div class="dropdown-content">
-                  <a href="">T-SHIRT</a>
-                  <a href="">MUG</a>
-                </div>
-              </div>
-              <a href="contactus.html"> ABOUT US</a>
-          
-            
-  
-   
-            </div>
-        
-          
-    
+          </div>
+          <a href="contactus.html">ABOUT US</a>
+        </div>
         <div class="search">
           <form id="search-form">
-            <input type="text" id="search-input" placeholder="SEARCH" />
+            <input type="text" id="search" placeholder="SEARCH" />
             <button type="submit" id="search-btn">
               <i class="fas fa-search"></i>
             </button>
@@ -74,99 +56,83 @@
 
     <main>
         <div class="contact">
-            <div class="bk-pink">
+            <div class="rigth-shadow" >
                 <div class="contact-par">
                     <h1> Aya Alasmar</h1>
                     <p>
-                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia quaerat
-                    labore, architecto in qui! Enim nulla pariatur ut omnis mollitia, rerum sit quas cum nemo possimus
-                    eaque, fugit libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quibusdam.
-                    Pariatur, delectus excepturi ipsa laboriosam fugiat mollitia illum, eius ex at, qui quisquam. Neque
-                    reiciendis cum blanditiis! Eos, corporis dolore.
+                        My name is Aya Alasmar. I am recently graduated from Zarqa University with an excellent degree in Computer Science .
+                        I have a good knowledge in Front-End and Back-End and other programming languages  such as Python , Oracle , php and C#. 
+                       interested in Front End , Image processing, and machine learning.
                     </p>
                 </div>
-                <div class="flag rigth-img-cutting pink">
+                <div class="flag rigth-img-cutting ">
 
                     <img src="img/aya.jpg" class=" rigth-img"  width="350" height="250">
                     </div>
             </div>
 
 
-            <div class="bk-blue">
+            <div >
                
-                <div class="flag left-img-cutting blue">
+                <div class="flag left-img-cutting ">
 
-                    <img src="img/baraah.png" class=" rigth-img"  width="350" height="250">
+                    <img src="img/subaib1.jpg" class=" rigth-img"  width="350" height="250">
                     </div>
                 <div class="contact-par"> 
                     
-                    <h1> Baraah Bsharat </h1>
-                    <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia quaerat labore, architecto in
-                    qui! Enim nulla pariatur ut omnis mollitia, rerum sit quas cum nemo possimus eaque, fugit libero.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quibusdam. Pariatur, delectus
-                    excepturi ipsa laboriosam fugiat mollitia illum, eius ex at, qui quisquam. Neque reiciendis cum
-                    blanditiis! Eos, corporis dolore.
-                    </p>
+                  <h1>Suhaib Emad </h1>
+                  <p>
+                      Hay everyone , am 24 year old who was planning to be a mechanical engineer , with time I relies that's not what I want to do for the rest of my life ,so I start learning (html,css and javascript) I find   software development more fun and  decided that's what I want to do for the rest of my life
+                  </p>
                 </div>
             </div>
 
 
-            <div class="bk-yellow">
+            <div class="rigth-shadow">
                
                 <div class="contact-par">
                 
-                    <h1> Malek Esmail </h1>
-                    <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia quaerat
-                    labore, architecto in qui! Enim nulla pariatur ut omnis mollitia, rerum sit quas cum nemo possimus
-                    eaque, fugit libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quibusdam.
-                    Pariatur, delectus excepturi ipsa laboriosam fugiat mollitia illum, eius ex at, qui quisquam. Neque
-                    reiciendis cum blanditiis! Eos, corporis dolore.
-                </p>
-             </div>
-             <div class="flag rigth-img-cutting yellow">
+                    <h1>Baraah Bsharat </h1>
+                    <p> I am Baraah Bsharat, Bsc. Occupational Therapy, Ms.Clinical Rehabilitation Science, 24 years old, interested in the assistive technology for people with disabilities, I am in my way to learn programming to construct my phd project
+                   
 
-                <img src="img/malek.jpg" class=" rigth-img"  width="350" height="250">
+                        </p>
+             </div>
+             <div class="flag rigth-img-cutting ">
+
+                <img src="img/baraah.png" class=" rigth-img"  width="350" height="250">
                 </div>
             </div>
 
 
-            <div class="bk-green">
+            <div>
                
-                <div class="flag left-img-cutting green">
+                <div class="flag left-img-cutting ">
 
                     <img src="img/salim.jpg" class=" rigth-img"  width="350" height="250">
                     </div>
                 <div class="contact-par">
                     <h1> Salem Nihad </h1>
                     <p>
-                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia quaerat labore, architecto in
-                    qui! Enim nulla pariatur ut omnis mollitia, rerum sit quas cum nemo possimus eaque, fugit libero.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quibusdam. Pariatur, delectus
-                    excepturi ipsa laboriosam fugiat mollitia illum, eius ex at, qui quisquam. Neque reiciendis cum
-                    blanditiis! Eos, corporis dolore.
+                     My name is Salem Nihad Raji Abdul Rahman, I'm 22 years old , Recently Graduated from Al-Hussein Bin Talal University , studied Computer Information Systems ,  I have a good knowledge in C#, and worked in kotlin language to developing Android applications.
                     </p>
                 
                 </div>
             </div>
 
 
-            <div class="bk-purple">
+            <div class="rigth-shadow">
                 
                 <div class="contact-par"> 
-                    <h1>Suhaib Emad </h1>
-                    <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quia quaerat
-                    labore, architecto in qui! Enim nulla pariatur ut omnis mollitia, rerum sit quas cum nemo possimus
-                    eaque, fugit libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quibusdam.
-                    Pariatur, delectus excepturi ipsa laboriosam fugiat mollitia illum, eius ex at, qui quisquam. Neque
-                    reiciendis cum blanditiis! Eos, corporis dolore.
-                    </p>
+                  <h1>  Malek Esmail </h1>
+                  <p> Welcome All My name is Malek I have the ability to program in Python Currently, I'm learning (CSS, HTML, JS) I will strive to be one of the best soon.
+             
+                      </p>
+                    
                 </div>
-                <div class="flag rigth-img-cutting purple">
+                <div class="flag rigth-img-cutting ">
 
-                <img src="img/subaib.jpg" class=" rigth-img"  width="350" height="250">
+                <img src="img/malek.jpg" class=" rigth-img"  width="350" height="250">
                 </div>
             </div>
 
