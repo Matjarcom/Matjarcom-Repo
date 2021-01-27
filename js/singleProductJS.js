@@ -1,5 +1,5 @@
 "use strict";
-
+// debugger;
 // Creating a Constructor To store the getItem from the local Storage in order to use it in Rendering
 function Single(name,img,type,price,custumColor,voice,information) {
  //Properties for each items
@@ -98,7 +98,7 @@ buyNowButton.setAttribute("onclick", "addToCart();");
 var myCart = []
 
 function addToCart() {
-  debugger;
+  // debugger;
   // Get storaged data if exist old items
   var storaged = localStorage.getItem("cart");
   if (storaged != null) {
