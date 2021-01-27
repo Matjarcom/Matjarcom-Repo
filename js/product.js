@@ -212,17 +212,11 @@ function renderItems(rendArrray,event){
             }
             
      
-
-
-    }
-
-}
-
        //................ Add Event Listener to take the product from Buy Now Button
        var buyNowButtonProduct = document.getElementsByClassName("buy");
 
        for (let x = 0; x < buyNowButtonProduct.length; x++) {
-           console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct.length);
+           console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct);
            console.log('this is listedProduct.length ',listedProduct.length);
          buyNowButtonProduct[x].addEventListener("click", updatingCart);
          function updatingCart(event) {
@@ -243,6 +237,12 @@ function renderItems(rendArrray,event){
            
          }
        }
+
+
+    }
+
+}
+
        
        
 
