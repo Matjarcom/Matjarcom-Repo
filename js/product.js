@@ -45,12 +45,14 @@ else if(emt){
 
 }
 else {
+    if(window.location.pathname==='/Products.html'){
+        creatPants();
+        creatShirt();
+        createToys(); 
+        createBook(); 
+    }
     
-    creatPants();
-    creatShirt();
-    createToys(); 
-    createBook();  
-    localStorage.clear();
+    //localStorage.clear();
    
 }
 
@@ -135,8 +137,6 @@ function  createToys(){
 //to create book items
 function  createBook(){
     products.prototype.bookArray=[];
-
-
     new products('Ginger the Girrafe','bookimg/ginger.jpg','book',5.99,false,false,'Read this warm tale of camaraderie and affection set in the wild and beautiful Savannah in our free illustrated kids book. Ginger the giraffe uses her long neck to save the other animals from the blazing forest fire. Follow them in their jungle paths as they all meet with yet another adventure');
     new products('I found a Frog','bookimg/frog.jpg','book',6,false,false,'Something magical was happening in the fish bowl  and he wasn’t  quite ready for what lay in store.  Read this captivating free illustrated book for kids that encourages them to explore and be awed by the many wonders of nature. ');
     new products('Hide and seek','bookimg/hide.jpg','book',8.99,false,false,'Was it just another game of hide and seek? No. It was not. First, she fell into a deep, dark hole in the ground and then they found a treasure. Did it end there? No! It did not. Read more about this thrilling adventure of Sally and friends in this free illustrated kids’ book. The fun never ends when Sally’s around!');
@@ -164,6 +164,10 @@ function  createBook(){
 
 // console.log('listedProduct');
 
+
+
+
+////////////////////
 //render the items
 function renderItems(rendArrray,event){
 
@@ -175,7 +179,7 @@ function renderItems(rendArrray,event){
        
     //    listedProduct.push(rendArrray);
        //nested loop for show three items every row
-    for(var i =0;i<Math.ceil(rendArrray.length/4 ) ;i++){
+    for(var i =0;i<Math.ceil(rendArrray.length/3) ;i++){
             var rowDiv = document.createElement('div');
             rowDiv.className='maindiv';
             cunterJ+=3;
@@ -211,6 +215,7 @@ function renderItems(rendArrray,event){
                 
             }
             
+
      
        //................ Add Event Listener to take the product from Buy Now Button
        var buyNowButtonProduct = document.getElementsByClassName("buy");
@@ -219,8 +224,12 @@ function renderItems(rendArrray,event){
            console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct);
            console.log('this is listedProduct.length ',listedProduct.length);
          buyNowButtonProduct[x].addEventListener("click", updatingCart);
+        
          function updatingCart(event) {
-             if (listedProduct.length == buyNowButtonProduct.length ) {
+            localStorage.removeItem('SRG');
+            localStorage.removeItem('render');
+            
+             if (listedProduct.length === buyNowButtonProduct.length ) {
                // set the Product inside a local storage
                localStorage.setItem(
                  "singleProductObj",
@@ -238,11 +247,10 @@ function renderItems(rendArrray,event){
          }
        }
 
-
     }
 
 }
 
-       
-       
 
+
+ 

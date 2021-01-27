@@ -113,25 +113,51 @@ function changetexxt(){
 }
 
 
-
 // // Store the product on the local storge 
 
-// var myCartButton = document.createElement("a");
-// singleProductDetailesContainer.appendChild(myCartButton);
-// myCartButton.innerHTML = "<a href='checkout.html'>View My Cart</a>";
+var myCart = [];
+function customShirtCart() {
+    //debugger;
+    // Get storaged data if exist old items
+    var storaged = localStorage.getItem("cart");
+    if (storaged != null) {
+      myCart = JSON.parse( storaged );
+    }
+    // Add the new current item to myCart localstorage
+    var currentProduct = {
+        cIformation: "T-Shirt",
+        cName: "Custom T-Shirt",
+        cPrice: 25,
+        cType: "custom",
+        cimage: "assets/images/tshirt.png",
+        sticker: document.getElementById("item-shirtlogo").src,
+        text: document.getElementById("item-text").textContent,
+        color: document.getElementById("item-upperbody").style.filter,
+    };
+    myCart.push(currentProduct);
+    localStorage.setItem("cart", JSON.stringify(myCart) );
+    alert("product added to my cart")
+}
 
-// var myCart = []
-
-// function addToCart() {
-//   // Get storaged data if exist old items
-//   var storaged = localStorage.getItem("cart");
-//   if (storaged != null) {
-//     myCart = JSON.parse( storaged );
-//   }
-//   // Add the new current item to myCart localstorage
-//   var currentProduct = JSON.parse( localStorage.getItem("singleProductObj") );
-//   myCart.push(currentProduct);
-//   localStorage.setItem("cart", JSON.stringify(myCart) );
-//   alert("product added to my cart")
-// }
-
+function customMugCart() {
+    //debugger;
+    // Get storaged data if exist old items
+    var storaged = localStorage.getItem("cart");
+    if (storaged != null) {
+      myCart = JSON.parse( storaged );
+    }
+    // Add the new current item to myCart localstorage
+    var currentProduct = {
+        cIformation: "Mug",
+        cName: "Custom Mug",
+        cPrice: 10,
+        cType: "custom",
+        cimage: "assets/images/hyy.png",
+        sticker: document.getElementById("item-muglogo").src,
+        text: document.getElementById("item-textm").textContent,
+        color: document.getElementById("mugpic").style.filter,
+    };
+    myCart.push(currentProduct);
+    localStorage.setItem("cart", JSON.stringify(myCart) );
+    alert("product added to my cart")
+}
