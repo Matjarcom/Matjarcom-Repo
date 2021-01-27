@@ -37,7 +37,7 @@
           <div class="nav-list">
             <a href="index.html"> HOME</a>
             <div class="dropdown">
-              <a class="dropbtn" href="Products.html" onclick="localStorage.clear()">PRIDUCTS  <i class="fas fa-sort-down"></i></a>
+              <a class="dropbtn" href="Products.html" onclick="localStorage.removeItem('render')" >PRIDUCTS  <i class="fas fa-sort-down"></i></a>
               <div class="dropdown-content">
                 <a href="Products.html" id="pantClick">PANTS</a>
                 <a href="Products.html" id="shirtClick">SHIRTS</a>
@@ -64,7 +64,7 @@
   
       <div class="search">
         <form id="search-form">
-          <input type="text" id="search-input" placeholder="SEARCH" />
+          <input type="text" id="search" placeholder="SEARCH" />
           <button type="submit" id="search-btn">
             <i class="fas fa-search"></i>
           </button>
@@ -118,7 +118,10 @@
         
   
       </footer>
+    
+      <script src="js/search.js"></script>
     <script src="js/product.js"></script>
+    
    
 </body>
 </html>
