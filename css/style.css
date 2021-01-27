@@ -424,3 +424,15 @@ footer{
 
 
 
+.page-name{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    width: 89.3%;
+    color: rgb(55, 55, 97);
+    background-color: gainsboro;
+    padding: 15px 70px;
+   
+  
+
+}
