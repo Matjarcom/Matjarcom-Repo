@@ -1,15 +1,17 @@
 
 "use strict"; 
-// debugger;
+
 
 //take the link id 
 var pantclick=document.getElementById('pantClick');
 var shirtclick=document.getElementById('shirtClick');
 var bookclick=document.getElementById('bookClick');
 var toyclick=document.getElementById('toyClick');
-var customclick=document.getElementById('customClick');
+
+
 //Array for every product renderd by the constructor
 var listedProduct = [];
+
 
 
 pantclick.addEventListener('click',paintRend);
@@ -20,19 +22,36 @@ bookclick.addEventListener('click',bookRend);
 function bookRend(){createBook();}
 toyclick.addEventListener('click',toyRend);
 function toyRend(){createToys();}
+
+var sRG=JSON.parse(localStorage.getItem('SRG'));
+var emt=localStorage.getItem('emtt');
 var savedata=JSON.parse(localStorage.getItem('render'));
 if(savedata){
     renderItems(savedata);
-    // localStorage.clear();
 }
-else{
+
+else if(sRG){
+renderItems(sRG);
+localStorage.removeItem('SRG');
+}
+else if(emt){
+    var bodymain=document.getElementById('main');
+    var h1=document.createElement('h1');
+    h1.textContent=emt;
+    if(window.location.pathname==='/Products.html'){   bodymain.appendChild(h1); localStorage.removeItem('emtt')}
+  
+
+
+
+}
+else {
     
     creatPants();
     creatShirt();
     createToys(); 
-    createBook();
+    createBook();  
     localStorage.clear();
-  
+   
 }
 
 
@@ -108,13 +127,10 @@ function  createToys(){
     new products('The piano game','img/toys/toy7.png','toys',14.99,false,false,'piano for children');
     new products('red car','img/toys/toy8.png','toys',16,false,false,'Baaby red car');
     new products('Bulldozer','img/toys/toy9.png','toys',17,false,false,'sand bulldozer for kids');
-    
 
-    if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.toysArray);}
-   
+    if(window.location.pathname==='/Products.html'){  renderItems(products.prototype.toysArray);}
 
     localStorage.setItem('render',JSON.stringify(products.prototype.toysArray));
-  
 }
 //to create book items
 function  createBook(){
@@ -130,8 +146,8 @@ function  createBook(){
     new products('Captin FAantastic','bookimg/captin.png','book',10.99,false,false,'Dr. Zob’s evil plans had failed once again, thanks to his wonder dog, Winston. They were just were they had to be, with Princess Aura at her birthday party. Read on to find out why Winston deserves a big cuddle and a juicy big bone. A big ‘Woof!’ to this wonderful free children’s story book.');
     new products('The case of the missing smile','mookimg/jpg.jpg','book',7,false,false,'Detective Peterson is trying to find where Sally Sue lost her beautiful smile. And she finds it..right in her heart, hidden from sight. Read this imaginative story of a little girl and how she learnt to smile again in this great free children’s fairy story.');
     new products('hammy the hamster','bookimg/hammy.jpg','book',8,false,false,'He’s got swag. He wears a tux. He’s a hipster hamster who likes to live free. Join Hammy in his South American home as you read this free story book for kids on your next read aloud day');
-    
-    if(window.location.pathname==='/Products.html'){ renderItems(products.prototype.bookArray);}
+   
+    if(window.location.pathname==='/Products.html'){  renderItems(products.prototype.bookArray);}
 
     localStorage.setItem('render',JSON.stringify(products.prototype.bookArray));
 }
@@ -159,7 +175,7 @@ function renderItems(rendArrray,event){
        
     //    listedProduct.push(rendArrray);
        //nested loop for show three items every row
-    for(var i =0;i<Math.ceil(rendArrray.length/3) ;i++){
+    for(var i =0;i<Math.ceil(rendArrray.length/4 ) ;i++){
             var rowDiv = document.createElement('div');
             rowDiv.className='maindiv';
             cunterJ+=3;
@@ -220,6 +236,7 @@ for (let x = 0; x < buyNowButtonProduct.length; x++) {
     
   }
 }
+
 
 
 
