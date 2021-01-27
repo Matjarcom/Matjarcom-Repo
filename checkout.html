@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/style.css" />
-     
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
       rel="stylesheet"
     />
-
     <title>MATJAR.COM</title>
   </head>
-
   <body>
     <header>
       <nav>
@@ -54,57 +51,21 @@
         </nav>
     </header>
     <main>
-        <h1 class="page-name"> products > cart </h1>
-        <section id="menu">
-        
-            <span>Product Image</span>
-            <span>Product Name</span>
-            <span class="span">Price</span>
-        </section>
-
+        <form action="index.html">
+            <input type="submit" value="back to shopping"/>
+        </form>
         <section id="cart">
+            <h2>Purchases list</h2>
             <div id="cart-all-items">
-              
+            </div>
             <div class="total">
                 <b>Total price: </b>
-             
+                <span id="total-price"></span>
                 <span>JD</span>
             </div>
         </section>
-        
-
     </main>
-
-    <footer>
-        <div class="footer">
-          <h1>OUR CATEGORIES</h1>
-          <a href="">PANTS</a>
-          <a href="">SHIRTS</a>
-          <a href="">TOYS</a>
-          <a href="">BOOKS</a>
-          <a href="">CUSTOM ORDER</a>
-        </div>
-  
-        <div class="footer">
-          <h1>CONTACT US </h1>
-          <a href="" >ABOUT US</a>
-          <a>Email: matjar@gmail.com</a>
-          <a >+78888888888</a>
-          <a>+7999999999</a>
-          <div >
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-          </div>
-  
-        </div>
-  
-        <div class="footer footer-logo">
-          <img src="img/logo.png" width="100">
-          <a href="index.html">MATJAR.COM</a>
-        </div>
-        
-  
-      </footer>
+    <footer></footer>
+    <script src="js/checkout.js"></script>
 </body>
 </html>

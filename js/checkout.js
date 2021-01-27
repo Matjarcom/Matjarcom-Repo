@@ -1,10 +1,8 @@
 var checkoutProducts = JSON.parse( localStorage.getItem("cart") );
 var cartAllItems = document.getElementById("cart-all-items");
-
 function renderCart(){
     cartAllItems.innerHTML = "";
     var total = 0;
-    
     if(checkoutProducts === undefined || checkoutProducts.length == 0) {
         cartAllItems.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
     }
@@ -19,7 +17,6 @@ function renderCart(){
     document.getElementById("total-price").innerHTML = total.toFixed(2);
 }
 renderCart();
-
 function deleteItem(current) {
     var x = checkoutProducts;
     x.splice(current, 1);
