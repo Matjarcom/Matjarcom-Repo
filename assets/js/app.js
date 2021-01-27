@@ -114,3 +114,24 @@ function changetexxt(){
 
 
 
+// // Store the product on the local storge 
+
+// var myCartButton = document.createElement("a");
+// singleProductDetailesContainer.appendChild(myCartButton);
+// myCartButton.innerHTML = "<a href='checkout.html'>View My Cart</a>";
+
+// var myCart = []
+
+// function addToCart() {
+//   // Get storaged data if exist old items
+//   var storaged = localStorage.getItem("cart");
+//   if (storaged != null) {
+//     myCart = JSON.parse( storaged );
+//   }
+//   // Add the new current item to myCart localstorage
+//   var currentProduct = JSON.parse( localStorage.getItem("singleProductObj") );
+//   myCart.push(currentProduct);
+//   localStorage.setItem("cart", JSON.stringify(myCart) );
+//   alert("product added to my cart")
+// }
+
