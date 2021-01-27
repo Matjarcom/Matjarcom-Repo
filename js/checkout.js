@@ -9,7 +9,7 @@ function renderCart(){
     else {
         for(var i = 0; i < checkoutProducts.length; i++){
             var item = document.createElement("div");
-            item.innerHTML = '<div class="cart-item"> <div class="spec"> <img src=' + checkoutProducts[i].cimage + ' width="70px"> </div> <div class="spec"> <b>product name</b> <p>' + checkoutProducts[i].cName + '</p> </div> <div class="spec"> <b>Type</b> <p>' + checkoutProducts[i].cType + '</p> </div> <div class="spec"> <b>quntity</b> <p><input id="quan" type="number" value="1" min="1" onchange="alert()"></p> </div> <div class="spec"> <b>price</b> <p>' + checkoutProducts[i].cPrice + ' JD</p> </div> <div class="spec"> <b>tools</b> <p><button onclick="deleteItem(' + i + ')">delete</button></p> </div> </div>';
+            item.innerHTML = '<div class="cart-item"> <div class="spec"> <img src=' + checkoutProducts[i].cimage + ' width="70px"> </div> <div class="spec"> <h>' + checkoutProducts[i].cName + ' </p>  </div> <div class="spec"><p>' + checkoutProducts[i].cType + '</p> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div> <div class="spec"> <b>price</b> <p>' + checkoutProducts[i].cPrice + ' JD</p> </div></div>';
             cartAllItems.appendChild(item);
             total += checkoutProducts[i].cPrice;
         }
