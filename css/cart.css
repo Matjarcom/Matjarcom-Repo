@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: sans-serif;
 }
 
@@ -104,4 +104,27 @@ body {
 }
 .span{
     padding-left: 240px !important;
+} */
+
+.row{
+    display: flex;
+}
+
+#cart{
+    background-color: rgb(247, 244, 244);
+    width: 70%;
+    margin:20px  auto;
+    border-radius: 20px;
+}
+.shopping{
+    font-size: 25px;
+    font-weight: 800;
+
+}
+#cart img:first-child{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:rgb(179, 176, 176);
+    border: 1px solid  rgb(55, 55, 97);
 }
