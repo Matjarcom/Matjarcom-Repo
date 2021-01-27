@@ -164,6 +164,10 @@ function  createBook(){
 
 // console.log('listedProduct');
 
+
+
+
+////////////////////
 //render the items
 function renderItems(rendArrray,event){
 
@@ -175,7 +179,7 @@ function renderItems(rendArrray,event){
        
     //    listedProduct.push(rendArrray);
        //nested loop for show three items every row
-    for(var i =0;i<Math.ceil(rendArrray.length/4 ) ;i++){
+    for(var i =0;i<Math.ceil(rendArrray.length/3) ;i++){
             var rowDiv = document.createElement('div');
             rowDiv.className='maindiv';
             cunterJ+=3;
@@ -239,8 +243,11 @@ for (let x = 0; x < buyNowButtonProduct.length; x++) {
 
 
 
-
     }
 
 }
 
+
+
+
+ 
