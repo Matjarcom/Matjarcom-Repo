@@ -164,6 +164,10 @@ function  createBook(){
 
 // console.log('listedProduct');
 
+
+
+
+////////////////////
 //render the items
 function renderItems(rendArrray,event){
 
@@ -175,7 +179,7 @@ function renderItems(rendArrray,event){
        
     //    listedProduct.push(rendArrray);
        //nested loop for show three items every row
-    for(var i =0;i<Math.ceil(rendArrray.length/4 ) ;i++){
+    for(var i =0;i<Math.ceil(rendArrray.length/3) ;i++){
             var rowDiv = document.createElement('div');
             rowDiv.className='maindiv';
             cunterJ+=3;
@@ -211,38 +215,39 @@ function renderItems(rendArrray,event){
                 
             }
             
-     
+            //................ Add Event Listener to take the product from Buy Now Button
+var buyNowButtonProduct = document.getElementsByClassName("buy");
+
+for (let x = 0; x < buyNowButtonProduct.length; x++) {
+    console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct.length);
+    console.log('this is listedProduct.length ',listedProduct.length);
+  buyNowButtonProduct[x].addEventListener("click", updatingCart);
+  function updatingCart(event) {
+      if (listedProduct.length == buyNowButtonProduct.length ) {
+        // set the Product inside a local storage
+        localStorage.setItem(
+          "singleProductObj",
+          JSON.stringify(listedProduct[x])
+        ); 
+        console.log('in if'); 
+      }else{
+        localStorage.setItem(
+            "singleProductObj",
+            JSON.stringify(rendArrray[x])
+          ); 
+
+      }
+    
+  }
+}
+
 
 
     }
 
 }
 
-       //................ Add Event Listener to take the product from Buy Now Button
-       var buyNowButtonProduct = document.getElementsByClassName("buy");
 
-       for (let x = 0; x < buyNowButtonProduct.length; x++) {
-           console.log('this is buyNowButtonProduct.length ',buyNowButtonProduct.length);
-           console.log('this is listedProduct.length ',listedProduct.length);
-         buyNowButtonProduct[x].addEventListener("click", updatingCart);
-         function updatingCart(event) {
-             if (listedProduct.length == buyNowButtonProduct.length ) {
-               // set the Product inside a local storage
-               localStorage.setItem(
-                 "singleProductObj",
-                 JSON.stringify(listedProduct[x])
-               ); 
-               console.log('in if'); 
-             }else{
-               localStorage.setItem(
-                   "singleProductObj",
-                   JSON.stringify(rendArrray[x])
-                 ); 
-       
-             }
-           
-         }
-       }
-       
-       
 
+
+ 
