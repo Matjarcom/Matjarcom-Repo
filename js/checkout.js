@@ -12,11 +12,11 @@ function renderCart(){
             item.setAttribute('class','spec');
             if (checkoutProducts[i].sticker != undefined) {
                 // custom shirt
-                item.innerHTML = checkoutProducts[i].cIformation + ' <img src=' + checkoutProducts[i].cimage + ' width ="50" style="filter: ' + checkoutProducts[i].color +  '"> <span class="sticker-text">' + checkoutProducts[i].text + '</span> <img class="sticker" src=' + checkoutProducts[i].sticker + ' width="40px">  </div> <div class="information"> <h2>' + checkoutProducts[i].cName + '</h2>   </div> <div class="information"> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div> <div class="information"> <h2> ' + checkoutProducts[i].cPrice + ' JD </h2> ';
+                item.innerHTML = ' <img src=' + checkoutProducts[i].cimage + ' width ="50" style="filter: ' + checkoutProducts[i].color +  '"> <span class="sticker-text">' + checkoutProducts[i].text + '</span> <img class="sticker" src=' + checkoutProducts[i].sticker + ' width="40px">  </div> <div class="information"> <h2>' + checkoutProducts[i].cName + '</h2> </div> <div class="information"> <h2 class="price"> ' + checkoutProducts[i].cPrice + ' JD </h2></div><div class="information"> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div> ';
             }
             else {
                 // not custom
-                item.innerHTML = ' <img src=' + checkoutProducts[i].cimage + ' width="70" > </div> <div class="information"> <h2>' + checkoutProducts[i].cName + '  </h2> </div> <div class="information"> <h2>' + checkoutProducts[i].cType + '</h2> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div> <div class="information"> <h2> ' + checkoutProducts[i].cPrice + ' JD</h2>';
+                item.innerHTML = ' <img src=' + checkoutProducts[i].cimage + ' width="70" > </div> <div class="information"> <h2>' + checkoutProducts[i].cName + '  </h2> </div><div class="information"> <h2 class="price"> ' + checkoutProducts[i].cPrice + ' JD</h2></div><div class="information"> <button class="close" onclick="deleteItem(' + i + ')"><i class="fas fa-times-circle"></i></button></div>';
             }
             cartAllItems.appendChild(item);
             total += checkoutProducts[i].cPrice;
